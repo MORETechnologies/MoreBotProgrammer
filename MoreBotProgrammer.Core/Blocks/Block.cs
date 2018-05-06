@@ -2,8 +2,8 @@
 
 namespace MoreBotProgrammer.Core
 {
-    interface IBlock
+    abstract class Block
     {
-        string BlockName { get; }
+        public abstract BlockType BlockType { get; }
     }
 }

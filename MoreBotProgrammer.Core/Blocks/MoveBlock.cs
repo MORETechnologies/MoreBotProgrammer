@@ -1,11 +1,7 @@
-﻿using System;
-
-namespace MoreBotProgrammer.Core
+﻿namespace MoreBotProgrammer.Core
 {
-    public class MoveBlock : IBlock
+    class MoveBlock : Block
     {
-        public static string Name = "MoveBlock";
-
-        public string BlockName => Name;
+        public override BlockType BlockType => BlockType.Move;
     }
 }

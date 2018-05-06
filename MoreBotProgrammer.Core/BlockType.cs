@@ -1,7 +1,8 @@
-﻿using System;
-namespace MoreBotProgrammer.Core
+﻿namespace MoreBotProgrammer.Core
 {
     public enum BlockType
     {
+        Move,
+        Sleep
     }
 }
