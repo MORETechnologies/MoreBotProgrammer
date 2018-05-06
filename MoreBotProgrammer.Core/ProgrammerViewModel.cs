@@ -1,27 +1,38 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MoreBotProgrammer.Core
 {
     public class ProgrammerViewModel
     {
-        ObservableCollection<IBlock> blocks;
+        BlockFactory blockFactory;
+        BlockViewModelFactory blockViewModelFactory;
+        List<Block> blocks;
+        List<BlockViewModel> blockViewModels;
 
         public ProgrammerViewModel()
         {
-            blocks = new ObservableCollection<IBlock>();
-            Blocks = new ReadOnlyObservableCollection<IBlock>(blocks);
+            blockFactory = new BlockFactory();
+            blockViewModelFactory = new BlockViewModelFactory();
+            blocks = new List<Block>();
+            blockViewModels = new List<BlockViewModel>();
         }
 
-        public ReadOnlyObservableCollection<IBlock> Blocks { get; private set; }
+        public event EventHandler BlocksChanged;
 
-        public void OnAddBlock(IBlock block)
+        public IReadOnlyList<BlockViewModel> BlockViewModels => blockViewModels;
+
+        public void OnAddBlock(BlockType blockType)
         {
-            blocks.Add(block);
+            Block newBlock = blockFactory.CreateBlock(blockType);
+            blocks.Add(newBlock);
+            blockViewModels.Add(blockViewModelFactory.CreateBlockViewModel(newBlock));
         }
 
-        public void OnRemoveBlock(IBlock block)
+        public void OnRemoveBlock(BlockViewModel block)
         {
-            blocks.Remove(block);
+            blocks.Remove(block.Block);
+            blockViewModels.Remove(block);
         }
     }
 }

@@ -1,10 +1,16 @@
-﻿using System;
-namespace MoreBotProgrammer.Core
+﻿namespace MoreBotProgrammer.Core
 {
-    public class MoveBlockViewModel
+    public class MoveBlockViewModel : BlockViewModel
     {
-        public MoveBlockViewModel()
+        private MoveBlock block;
+
+        internal MoveBlockViewModel(Block block)
         {
+            this.block = (MoveBlock)block;
         }
+
+        public override BlockType BlockType => block.BlockType;
+
+        internal override Block Block => block;
     }
 }

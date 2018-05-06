@@ -1,10 +1,18 @@
 ﻿using System;
 namespace MoreBotProgrammer.Core
 {
-    public class BlockViewModelFactory
+    class BlockViewModelFactory
     {
-        public BlockViewModelFactory()
+        public BlockViewModel CreateBlockViewModel(Block block)
         {
+            switch (block.BlockType) {
+                case BlockType.Move:
+                    return new MoveBlockViewModel(block);
+                case BlockType.Sleep:
+                    return new SleepBlockViewModel(block);
+            }
+
+            return null;
         }
     }
 }

@@ -12,5 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Blocks\" />
+    <Folder Include="BlockViewModels\" />
   </ItemGroup>
 </Project>

@@ -4,6 +4,6 @@
     {
         public abstract BlockType BlockType { get; }
 
-        internal Block Block { get; }
+        internal abstract Block Block { get; }
     }
 }
