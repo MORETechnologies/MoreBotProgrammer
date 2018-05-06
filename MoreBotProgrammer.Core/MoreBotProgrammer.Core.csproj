@@ -7,4 +7,10 @@
   <ItemGroup>
     <Compile Remove="Class1.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Reactive" Version="4.0.0-preview00001" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Blocks\" />
+  </ItemGroup>
 </Project>
