@@ -91,11 +91,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Blocks\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="ProgrammerViewController.xib" />
     <InterfaceDefinition Include="RootViewController.xib" />
+    <InterfaceDefinition Include="Blocks\MoveBlockViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -112,6 +114,19 @@
     <Compile Include="RootViewController.designer.cs">
       <DependentUpon>RootViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Blocks\BlockViewCell.cs" />
+    <Compile Include="Blocks\MoveBlockViewCell.cs" />
+    <Compile Include="Blocks\MoveBlockViewCell.designer.cs">
+      <DependentUpon>MoveBlockViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\BlockListDataSource.cs" />
+    <Compile Include="Blocks\BlockListDelegateLayout.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MoreBotProgrammer.Core\MoreBotProgrammer.Core.csproj">
+      <Project>{1ADB55E2-F9BD-4B34-8048-78464A0C3786}</Project>
+      <Name>MoreBotProgrammer.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
