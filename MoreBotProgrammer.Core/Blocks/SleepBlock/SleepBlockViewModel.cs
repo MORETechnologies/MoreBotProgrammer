@@ -13,6 +13,8 @@
 
         public override int Lines => 1;
 
+        public string Milliseconds => block.Milliseconds.ToString();
+
         internal override Block Block => block;
     }
 }
