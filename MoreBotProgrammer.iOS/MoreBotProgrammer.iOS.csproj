@@ -93,6 +93,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Blocks\" />
     <Folder Include="Blocks\MoveBlock\" />
+    <Folder Include="Blocks\SleepBlock\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -100,6 +101,7 @@
     <InterfaceDefinition Include="RootViewController.xib" />
     <InterfaceDefinition Include="Blocks\MoveBlock\MoveBlockViewCell.xib" />
     <InterfaceDefinition Include="Blocks\MoveBlock\MoveBlockBuilderViewController.xib" />
+    <InterfaceDefinition Include="Blocks\SleepBlock\SleepBlockViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -126,6 +128,10 @@
     <Compile Include="Blocks\MoveBlock\MoveBlockBuilderViewController.cs" />
     <Compile Include="Blocks\MoveBlock\MoveBlockBuilderViewController.designer.cs">
       <DependentUpon>MoveBlockBuilderViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\SleepBlock\SleepBlockViewCell.cs" />
+    <Compile Include="Blocks\SleepBlock\SleepBlockViewCell.designer.cs">
+      <DependentUpon>SleepBlockViewCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
