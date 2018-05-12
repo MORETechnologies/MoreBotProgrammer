@@ -2,11 +2,11 @@
 
 namespace MoreBotProgrammer.Core
 {
-    public class MoveBlockBuilderViewModel
+    public class MoveBlockBuilderViewModel : BlockBuilderViewModel
     {
         private MoveDirection currentDirection;
 
-        public MoveBlockBuilderViewModel()
+        internal MoveBlockBuilderViewModel()
         {
             currentDirection = MoveDirection.Forward;
             Speed = 80;
@@ -47,6 +47,11 @@ namespace MoreBotProgrammer.Core
                 Speed = speed;
                 ValuesChanged?.Invoke(this, EventArgs.Empty);
             }
+        }
+
+        public void OnSave()
+        {
+            OnBlockBuilt(this, new MoveBlock(currentDirection, Speed));
         }
     }
 }
