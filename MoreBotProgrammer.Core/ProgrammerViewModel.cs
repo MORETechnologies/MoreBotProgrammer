@@ -13,6 +13,7 @@ namespace MoreBotProgrammer.Core
         public ProgrammerViewModel()
         {
             blockViewModelFactory = new BlockViewModelFactory();
+            blockBuilderViewModelFactory = new BlockBuilderViewModelFactory();
 
             blocks = new List<Block>();
             blockViewModels = new List<BlockViewModel>();
