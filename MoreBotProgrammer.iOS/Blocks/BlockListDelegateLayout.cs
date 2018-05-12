@@ -7,6 +7,8 @@ namespace MoreBotProgrammer.iOS
 {
     public class BlockListDelegateLayout : UICollectionViewDelegateFlowLayout
     {
+        private const float HeightPerLine = 40;
+
         ProgrammerViewModel viewModel;
 
         public BlockListDelegateLayout(ProgrammerViewModel programmerViewModel)
@@ -14,10 +16,10 @@ namespace MoreBotProgrammer.iOS
             viewModel = programmerViewModel;
         }
 
-        [Export("collectionView:layout:sizeForItemAtIndexPath:")]
-        public CGSize GetSizeForItem(UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
+        public override CGSize GetSizeForItem(UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
         {
-            return new CGSize(collectionView.Frame.Width, collectionView.Frame.Width * 3 / 5);
+            float height = viewModel.BlockViewModels[indexPath.Row].Lines * HeightPerLine;
+            return new CGSize(collectionView.Frame.Width, height);
         }
     }
 }

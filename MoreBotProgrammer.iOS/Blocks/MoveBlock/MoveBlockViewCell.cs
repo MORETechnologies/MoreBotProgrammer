@@ -1,7 +1,7 @@
 ﻿using System;
 using Foundation;
-using UIKit;
 using MoreBotProgrammer.Core;
+using UIKit;
 
 namespace MoreBotProgrammer.iOS
 {
@@ -22,13 +22,25 @@ namespace MoreBotProgrammer.iOS
             // Note: this .ctor should not contain any initialization logic.
         }
 
-        public override nfloat Height => 300;
+        public override void AwakeFromNib()
+        {
+            base.AwakeFromNib();
+
+            OnAwake(cellContainer);
+        }
 
         public override BlockViewModel BlockViewModel => viewModel;
 
         public override void SetViewModel(BlockViewModel blockViewModel)
         {
             viewModel = (MoveBlockViewModel)blockViewModel;
+            UpdateView();
+        }
+
+        private void UpdateView()
+        {
+            directionLabel.Text = viewModel.Direction;
+            speedLabel.Text = viewModel.Speed;
         }
     }
 }

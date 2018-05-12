@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreGraphics;
 using MoreBotProgrammer.Core;
 using UIKit;
 
@@ -10,10 +11,13 @@ namespace MoreBotProgrammer.iOS
         {
         }
 
-        public abstract nfloat Height { get; }
-
         public abstract BlockViewModel BlockViewModel { get; }
 
         public abstract void SetViewModel(BlockViewModel blockViewModel);
+
+        protected void OnAwake(UIView container)
+        {
+            container.Layer.ShadowOffset = new CGSize(4, 4);
+        }
     }
 }

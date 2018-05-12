@@ -18,16 +18,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cb-nQ-u4T">
-                        <rect key="frame" x="111.5" y="110" width="77" height="30"/>
-                        <state key="normal" title="Go forward"/>
-                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUR-en-Zrr">
+                        <rect key="frame" x="8" y="88.5" width="284" height="73"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="149">
+                                <rect key="frame" x="8" y="44.5" width="49.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="148">
+                                <rect key="frame" x="8" y="8" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="148" firstAttribute="top" secondItem="MUR-en-Zrr" secondAttribute="top" constant="8" id="4To-mg-h0x"/>
+                            <constraint firstItem="149" firstAttribute="leading" secondItem="148" secondAttribute="leading" id="J1d-En-Nv9"/>
+                            <constraint firstAttribute="bottom" secondItem="149" secondAttribute="bottom" constant="8" id="ncn-hO-UxW"/>
+                            <constraint firstItem="149" firstAttribute="top" secondItem="148" secondAttribute="bottom" constant="16" id="svk-ZA-pIr"/>
+                            <constraint firstItem="148" firstAttribute="leading" secondItem="MUR-en-Zrr" secondAttribute="leading" constant="8" id="tk1-Cd-NOj"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="6Cb-nQ-u4T" firstAttribute="centerX" secondItem="cZE-iV-UFb" secondAttribute="centerX" id="Mw8-iR-0b7"/>
-                <constraint firstItem="6Cb-nQ-u4T" firstAttribute="centerY" secondItem="cZE-iV-UFb" secondAttribute="centerY" id="tjQ-x9-ee1"/>
+                <constraint firstAttribute="trailing" secondItem="MUR-en-Zrr" secondAttribute="trailing" constant="8" id="TvU-YQ-30T"/>
+                <constraint firstItem="MUR-en-Zrr" firstAttribute="centerY" secondItem="cZE-iV-UFb" secondAttribute="centerY" id="ok2-hL-hyI"/>
+                <constraint firstItem="MUR-en-Zrr" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="8" id="z8V-7P-C8y"/>
             </constraints>
+            <connections>
+                <outlet property="cellContainer" destination="MUR-en-Zrr" id="name-outlet-MUR-en-Zrr"/>
+                <outlet property="directionLabel" destination="148" id="name-outlet-148"/>
+                <outlet property="speedLabel" destination="149" id="name-outlet-149"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>
