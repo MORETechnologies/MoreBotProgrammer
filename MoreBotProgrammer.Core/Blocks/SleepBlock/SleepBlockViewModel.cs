@@ -11,6 +11,8 @@
 
         public override BlockType BlockType => block.BlockType;
 
+        public override int Lines => 1;
+
         internal override Block Block => block;
     }
 }

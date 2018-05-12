@@ -15,6 +15,8 @@
 
         public string Speed => block.Speed.ToString();
 
+        public override int Lines => 2;
+
         internal override Block Block => block;
     }
 }
