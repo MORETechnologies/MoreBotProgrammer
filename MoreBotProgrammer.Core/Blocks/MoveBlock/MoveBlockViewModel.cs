@@ -13,7 +13,7 @@
 
         public string Direction => block.Direction.ToString();
 
-        public int Speed => block.Speed;
+        public string Speed => block.Speed.ToString();
 
         internal override Block Block => block;
     }
