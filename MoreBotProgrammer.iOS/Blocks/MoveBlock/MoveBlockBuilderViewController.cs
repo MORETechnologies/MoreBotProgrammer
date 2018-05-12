@@ -45,6 +45,8 @@ namespace MoreBotProgrammer.iOS
         {
             directionButton.SetTitle(viewModel.SelectedDirection, UIControlState.Normal);
             speedLabel.Text = "Speed: " + viewModel.Speed;
+            speedSlider.MinValue = viewModel.MinSpeed;
+            speedSlider.MaxValue = viewModel.MaxSpeed;
             speedSlider.Value = viewModel.Speed;
         }
     }

@@ -15,8 +15,6 @@ namespace MoreBotProgrammer.Core
 
         public event EventHandler ValuesChanged;
 
-        public BlockType BlockType => BlockType.Move;
-
         public string SelectedDirection => currentDirection.ToString();
 
         public int Speed { get; private set; }
@@ -37,10 +35,10 @@ namespace MoreBotProgrammer.Core
 
         public void OnSpeedChanged(int speed)
         {
-            if (speed < 0) {
-                speed = 0;
-            } else if (speed > 100) {
-                speed = 100;
+            if (speed < MinSpeed) {
+                speed = MinSpeed;
+            } else if (speed > MaxSpeed) {
+                speed = MaxSpeed;
             }
 
             if (speed != Speed) {
