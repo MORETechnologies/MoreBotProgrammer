@@ -35,7 +35,7 @@ namespace MoreBotProgrammer.iOS
         {
             viewModel = (SleepBlockViewModel)blockViewModel;
 
-            sleepTextField.Text = viewModel.Milliseconds;
+            sleepLabel.Text = viewModel.Milliseconds;
         }
     }
 }

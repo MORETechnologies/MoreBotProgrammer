@@ -21,10 +21,6 @@ namespace MoreBotProgrammer.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel sleepLabel { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField sleepTextField { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
             if (cellContainer != null) {
@@ -35,11 +31,6 @@ namespace MoreBotProgrammer.iOS
             if (sleepLabel != null) {
                 sleepLabel.Dispose ();
                 sleepLabel = null;
-            }
-
-            if (sleepTextField != null) {
-                sleepTextField.Dispose ();
-                sleepTextField = null;
             }
         }
     }

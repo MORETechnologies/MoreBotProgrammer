@@ -21,20 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="174">
                         <rect key="frame" x="0.0" y="81.5" width="300" height="37"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="175">
-                                <rect key="frame" x="8" y="8" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="176">
-                                <rect key="frame" x="72" y="5" width="117" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="milliseconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFY-dx-xPG">
-                                <rect key="frame" x="197" y="8" width="95" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run for 1000 milliseconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="175">
+                                <rect key="frame" x="8" y="8" width="197.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,13 +31,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="175" firstAttribute="top" secondItem="174" secondAttribute="top" constant="8" id="6Ya-2Y-rPN"/>
-                            <constraint firstItem="176" firstAttribute="baseline" secondItem="175" secondAttribute="baseline" id="BXB-SS-YfD"/>
                             <constraint firstAttribute="bottom" secondItem="175" secondAttribute="bottom" constant="8" id="Ftv-Se-RCB"/>
-                            <constraint firstItem="rFY-dx-xPG" firstAttribute="baseline" secondItem="175" secondAttribute="baseline" id="X0d-Y9-929"/>
                             <constraint firstItem="175" firstAttribute="leading" secondItem="174" secondAttribute="leading" constant="8" id="aVZ-JO-cbZ"/>
-                            <constraint firstAttribute="trailing" secondItem="rFY-dx-xPG" secondAttribute="trailing" constant="8" id="cUo-Qf-lrK"/>
-                            <constraint firstItem="176" firstAttribute="leading" secondItem="175" secondAttribute="trailing" constant="8" id="lJa-cC-fAm"/>
-                            <constraint firstItem="rFY-dx-xPG" firstAttribute="leading" secondItem="176" secondAttribute="trailing" constant="8" id="y0h-lD-dyq"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -62,7 +45,6 @@
             <connections>
                 <outlet property="cellContainer" destination="174" id="name-outlet-174"/>
                 <outlet property="sleepLabel" destination="175" id="name-outlet-175"/>
-                <outlet property="sleepTextField" destination="176" id="name-outlet-176"/>
             </connections>
         </collectionViewCell>
     </objects>
