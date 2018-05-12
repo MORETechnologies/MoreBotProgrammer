@@ -17,7 +17,9 @@ namespace MoreBotProgrammer.iOS
 
         protected void OnAwake(UIView container)
         {
-            container.Layer.ShadowOffset = new CGSize(4, 4);
+            container.Layer.ShadowOffset = new CGSize(2, 2);
+            container.Layer.ShadowColor = UIColor.Black.CGColor;
+            container.Layer.ShadowOpacity = 0.5f;
         }
     }
 }

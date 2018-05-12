@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreGraphics;
 using Foundation;
 using MoreBotProgrammer.Core;
 using UIKit;
