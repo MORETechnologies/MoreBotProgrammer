@@ -25,7 +25,7 @@ namespace MoreBotProgrammer.Core
 
         public int MinSpeed => 0;
 
-        public void OnDirectionChanged(int index)
+        public void ChangeDirection(int index)
         {
             if (index > 0 && index < DirectionOptions.Length) {
                 currentDirection = (MoveDirection)index;
@@ -33,7 +33,7 @@ namespace MoreBotProgrammer.Core
             }
         }
 
-        public void OnSpeedChanged(int speed)
+        public void ChangeSpeed(int speed)
         {
             if (speed < MinSpeed) {
                 speed = MinSpeed;
@@ -47,7 +47,7 @@ namespace MoreBotProgrammer.Core
             }
         }
 
-        public void OnSave()
+        public void Save()
         {
             OnBlockBuilt(this, new MoveBlock(currentDirection, Speed));
         }

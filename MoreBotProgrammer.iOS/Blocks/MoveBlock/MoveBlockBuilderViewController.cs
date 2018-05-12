@@ -25,15 +25,15 @@ namespace MoreBotProgrammer.iOS
             };
 
             speedSlider.TouchUpInside += (sender, e) => {
-                viewModel.OnSpeedChanged((int)speedSlider.Value);
+                viewModel.ChangeSpeed((int)speedSlider.Value);
             };
 
             speedSlider.TouchUpOutside += (sender, e) => {
-                viewModel.OnSpeedChanged((int)speedSlider.Value);
+                viewModel.ChangeSpeed((int)speedSlider.Value);
             };
 
             saveButton.TouchUpInside += (sender, e) => {
-                viewModel.OnSave();
+                viewModel.Save();
             };
 
             viewModel.ValuesChanged += (sender, e) => {

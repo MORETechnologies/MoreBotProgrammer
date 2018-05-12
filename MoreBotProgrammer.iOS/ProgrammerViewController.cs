@@ -24,7 +24,7 @@ namespace MoreBotProgrammer.iOS
             blockCollectionView.Delegate = new BlockListDelegateLayout(viewModel);
 
             addMoveBlockButton.TouchUpInside += (sender, e) => {
-                viewModel.OnAddBlock(BlockType.Move);
+                viewModel.AddBlock(BlockType.Move);
             };
 
             viewModel.BlocksChanged += (sender, e) => {

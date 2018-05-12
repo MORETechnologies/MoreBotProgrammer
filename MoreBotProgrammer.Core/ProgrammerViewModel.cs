@@ -27,7 +27,7 @@ namespace MoreBotProgrammer.Core
 
         public IReadOnlyList<BlockViewModel> BlockViewModels => blockViewModels;
 
-        public void OnAddBlock(BlockType blockType)
+        public void AddBlock(BlockType blockType)
         {
             BlockBuilderViewModel blockBuilder = blockBuilderViewModelFactory.CreateBlockBuilderViewModel(blockType);
             blockBuilder.BlockBuilt += (sender, e) => {
@@ -38,7 +38,7 @@ namespace MoreBotProgrammer.Core
             BlockBuilderAdded?.Invoke(this, blockBuilder);
         }
 
-        public void OnRemoveBlock(BlockViewModel block)
+        public void RemoveBlock(BlockViewModel block)
         {
             blocks.Remove(block.Block);
             blockViewModels.Remove(block);
