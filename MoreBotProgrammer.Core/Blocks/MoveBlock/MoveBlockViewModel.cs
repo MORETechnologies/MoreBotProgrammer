@@ -11,9 +11,17 @@
 
         public override BlockType BlockType => block.BlockType;
 
-        public string Direction => block.Direction.ToString();
+        public string Direction {
+            get {
+                if (block.Direction == MoveDirection.Forward || block.Direction == MoveDirection.Backward) {
+                    return "Move " + block.Direction.ToString();
+                } else {
+                    return "Turn " + block.Direction.ToString();
+                }
+            }
+        }
 
-        public string Speed => block.Speed.ToString();
+        public string Speed => "at " + block.Speed + "% speed";
 
         public override int Lines => 2;
 
