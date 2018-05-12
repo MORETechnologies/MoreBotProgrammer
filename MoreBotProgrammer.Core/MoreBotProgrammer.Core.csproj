@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Blocks\" />
-    <Folder Include="BlockViewModels\" />
+    <Folder Include="Blocks\MoveBlock\" />
+    <Folder Include="Blocks\SleepBlock\" />
   </ItemGroup>
 </Project>
