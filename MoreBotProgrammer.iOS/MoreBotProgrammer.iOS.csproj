@@ -92,12 +92,13 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Blocks\" />
+    <Folder Include="Blocks\MoveBlock\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="ProgrammerViewController.xib" />
     <InterfaceDefinition Include="RootViewController.xib" />
-    <InterfaceDefinition Include="Blocks\MoveBlockViewCell.xib" />
+    <InterfaceDefinition Include="Blocks\MoveBlock\MoveBlockViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -115,12 +116,12 @@
       <DependentUpon>RootViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Blocks\BlockViewCell.cs" />
-    <Compile Include="Blocks\MoveBlockViewCell.cs" />
-    <Compile Include="Blocks\MoveBlockViewCell.designer.cs">
-      <DependentUpon>MoveBlockViewCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Blocks\BlockListDataSource.cs" />
     <Compile Include="Blocks\BlockListDelegateLayout.cs" />
+    <Compile Include="Blocks\MoveBlock\MoveBlockViewCell.cs" />
+    <Compile Include="Blocks\MoveBlock\MoveBlockViewCell.designer.cs">
+      <DependentUpon>MoveBlockViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoreBotProgrammer.Core\MoreBotProgrammer.Core.csproj">
