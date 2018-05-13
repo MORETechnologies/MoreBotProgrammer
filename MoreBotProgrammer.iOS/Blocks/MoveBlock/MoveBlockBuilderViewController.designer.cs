@@ -16,7 +16,7 @@ namespace MoreBotProgrammer.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton directionButton { get; set; }
+        UIKit.UIPickerView directionPickerView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -32,9 +32,9 @@ namespace MoreBotProgrammer.iOS
 
         void ReleaseDesignerOutlets ()
         {
-            if (directionButton != null) {
-                directionButton.Dispose ();
-                directionButton = null;
+            if (directionPickerView != null) {
+                directionPickerView.Dispose ();
+                directionPickerView = null;
             }
 
             if (saveButton != null) {

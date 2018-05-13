@@ -139,6 +139,7 @@
       <DependentUpon>SleepBlockBuilderViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Blocks\BlockBuilderViewControllerFactory.cs" />
+    <Compile Include="Blocks\MoveBlock\DirectionPickerModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoreBotProgrammer.Core\MoreBotProgrammer.Core.csproj">

@@ -17,6 +17,8 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
+            directionPickerView.Model = new DirectionPickerModel(viewModel);
+
             UpdateView();
 
             speedSlider.ValueChanged += (sender, e) => {
@@ -35,7 +37,6 @@ namespace MoreBotProgrammer.iOS
 
         private void UpdateView()
         {
-            directionButton.SetTitle(viewModel.SelectedDirection, UIControlState.Normal);
             speedLabel.Text = "Speed: " + viewModel.Speed;
             speedSlider.MinValue = viewModel.MinSpeed;
             speedSlider.MaxValue = viewModel.MaxSpeed;
