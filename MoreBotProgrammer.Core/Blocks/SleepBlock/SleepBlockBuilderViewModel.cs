@@ -9,6 +9,8 @@
 
         public int Milliseconds { get; private set; }
 
+        public override BlockType BlockType => BlockType.Sleep;
+
         public void ChangeMilliseconds(int milliseconds)
         {
             Milliseconds = milliseconds;

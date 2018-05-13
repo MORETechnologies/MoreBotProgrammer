@@ -25,6 +25,8 @@ namespace MoreBotProgrammer.Core
 
         public int MinSpeed => 0;
 
+        public override BlockType BlockType => BlockType.Move;
+
         public void ChangeDirection(int index)
         {
             if (index > 0 && index < DirectionOptions.Length) {

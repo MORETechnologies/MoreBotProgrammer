@@ -7,6 +7,7 @@ namespace MoreBotProgrammer.iOS
     {
         ProgrammerViewModel viewModel;
         BlockListDataSource dataSource;
+        BlockBuilderViewControllerFactory blockBuilderFactory;
 
         public ProgrammerViewController() : base("ProgrammerViewController", null)
         {
@@ -19,7 +20,9 @@ namespace MoreBotProgrammer.iOS
 
             viewModel = new ProgrammerViewModel();
             dataSource = new BlockListDataSource(viewModel);
+            blockBuilderFactory = new BlockBuilderViewControllerFactory();
             blockCollectionView.RegisterNibForCell(MoveBlockViewCell.Nib, BlockType.Move.ToString());
+            blockCollectionView.RegisterNibForCell(SleepBlockViewCell.Nib, BlockType.Sleep.ToString());
             blockCollectionView.DataSource = dataSource;
             blockCollectionView.Delegate = new BlockListDelegateLayout(viewModel);
 
@@ -27,12 +30,16 @@ namespace MoreBotProgrammer.iOS
                 viewModel.AddBlock(BlockType.Move);
             };
 
+            addSleepBlockButton.TouchUpInside += (sender, e) => {
+                viewModel.AddBlock(BlockType.Sleep);
+            };
+
             viewModel.BlocksChanged += (sender, e) => {
                 blockCollectionView.ReloadData();
             };
 
             viewModel.BlockBuilderAdded += (sender, e) => {
-                NavigationController.PushViewController(new MoveBlockBuilderViewController(e), true);
+                NavigationController.PushViewController(blockBuilderFactory.CreateBlockBuilderViewController(e), true);
             };
 
             viewModel.BlockBuilderRemoved += (sender, e) => {
