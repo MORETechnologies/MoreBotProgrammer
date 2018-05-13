@@ -22,7 +22,7 @@ namespace MoreBotProgrammer.iOS
             UpdateView();
 
             speedSlider.ValueChanged += (sender, e) => {
-                speedLabel.Text = "Speed: " + (int)speedSlider.Value;
+                speedLabel.Text = "Speed: " + (int)speedSlider.Value + "%";
             };
 
             saveButton.TouchUpInside += (sender, e) => {
@@ -37,7 +37,7 @@ namespace MoreBotProgrammer.iOS
 
         private void UpdateView()
         {
-            speedLabel.Text = "Speed: " + viewModel.Speed;
+            speedLabel.Text = "Speed: " + viewModel.SpeedText;
             speedSlider.MinValue = viewModel.MinSpeed;
             speedSlider.MaxValue = viewModel.MaxSpeed;
             speedSlider.Value = viewModel.Speed;

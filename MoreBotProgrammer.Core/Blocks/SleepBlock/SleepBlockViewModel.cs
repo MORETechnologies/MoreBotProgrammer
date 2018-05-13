@@ -13,7 +13,7 @@
 
         public override int Lines => 1;
 
-        public string Milliseconds => "Wait for " + block.Milliseconds.ToString() + " milliseconds";
+        public string Milliseconds => "for " + block.Milliseconds.ToString() + " milliseconds";
 
         internal override Block Block => block;
     }

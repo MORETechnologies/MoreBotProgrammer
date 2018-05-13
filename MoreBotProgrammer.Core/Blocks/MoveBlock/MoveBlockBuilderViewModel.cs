@@ -19,6 +19,8 @@ namespace MoreBotProgrammer.Core
 
         public int Speed { get; private set; }
 
+        public string SpeedText => Speed + "%";
+
         public string[] DirectionOptions { get; private set; }
 
         public int MaxSpeed => 100;
