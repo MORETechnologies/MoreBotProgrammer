@@ -19,15 +19,12 @@ namespace MoreBotProgrammer.iOS
 
             sleepTextField.Text = viewModel.Milliseconds.ToString();
 
-            sleepTextField.EditingDidEnd += (sender, e) => {
+            saveButton.TouchUpInside += (sender, e) => {
                 if (int.TryParse(sleepTextField.Text, out int milliseconds)) {
                     viewModel.ChangeMilliseconds(milliseconds);
                 } else {
                     sleepTextField.Text = viewModel.Milliseconds.ToString();
                 }
-            };
-
-            saveButton.TouchUpInside += (sender, e) => {
                 viewModel.Save();
             };
         }
