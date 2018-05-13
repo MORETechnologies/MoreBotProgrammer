@@ -1,6 +1,5 @@
 ﻿using MoreBotProgrammer.Core;
 using UIKit;
-using System;
 
 namespace MoreBotProgrammer.iOS
 {
@@ -24,15 +23,8 @@ namespace MoreBotProgrammer.iOS
                 speedLabel.Text = "Speed: " + (int)speedSlider.Value;
             };
 
-            speedSlider.TouchUpInside += (sender, e) => {
-                viewModel.ChangeSpeed((int)speedSlider.Value);
-            };
-
-            speedSlider.TouchUpOutside += (sender, e) => {
-                viewModel.ChangeSpeed((int)speedSlider.Value);
-            };
-
             saveButton.TouchUpInside += (sender, e) => {
+                viewModel.ChangeSpeed((int)speedSlider.Value);
                 viewModel.Save();
             };
 
