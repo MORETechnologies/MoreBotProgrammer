@@ -21,8 +21,8 @@ namespace MoreBotProgrammer.iOS
             viewModel = new ProgrammerViewModel();
             dataSource = new BlockListDataSource(viewModel);
             blockBuilderFactory = new BlockBuilderViewControllerFactory();
-            blockCollectionView.RegisterNibForCell(MoveBlockViewCell.Nib, BlockType.Move.ToString());
-            blockCollectionView.RegisterNibForCell(SleepBlockViewCell.Nib, BlockType.Sleep.ToString());
+            blockCollectionView.RegisterNibForCell(BlockViewCell.Nib, BlockType.Move.ToString());
+            blockCollectionView.RegisterNibForCell(BlockViewCell.Nib, BlockType.Sleep.ToString());
             blockCollectionView.DataSource = dataSource;
             blockCollectionView.Delegate = new BlockListDelegateLayout(viewModel);
 

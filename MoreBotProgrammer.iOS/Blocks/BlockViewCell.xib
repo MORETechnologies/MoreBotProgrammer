@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cZE-iV-UFb" customClass="BlockViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="189">
+                        <rect key="frame" x="8" y="8" width="284" height="184"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="189" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="8" id="GAJ-eR-6jM"/>
+                <constraint firstItem="189" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" constant="8" id="Hf9-Yl-Eoq"/>
+                <constraint firstAttribute="trailing" secondItem="189" secondAttribute="trailing" constant="8" id="OJG-MT-NcY"/>
+                <constraint firstAttribute="bottom" secondItem="189" secondAttribute="bottom" constant="8" id="yTP-Em-n6s"/>
+            </constraints>
+            <connections>
+                <outlet property="cellContainer" destination="189" id="name-outlet-189"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

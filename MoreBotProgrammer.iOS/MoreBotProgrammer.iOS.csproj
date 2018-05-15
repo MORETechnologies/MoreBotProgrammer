@@ -99,10 +99,11 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="ProgrammerViewController.xib" />
     <InterfaceDefinition Include="RootViewController.xib" />
-    <InterfaceDefinition Include="Blocks\MoveBlock\MoveBlockViewCell.xib" />
     <InterfaceDefinition Include="Blocks\MoveBlock\MoveBlockBuilderViewController.xib" />
-    <InterfaceDefinition Include="Blocks\SleepBlock\SleepBlockViewCell.xib" />
     <InterfaceDefinition Include="Blocks\SleepBlock\SleepBlockBuilderViewController.xib" />
+    <InterfaceDefinition Include="Blocks\MoveBlock\MoveBlockView.xib" />
+    <InterfaceDefinition Include="Blocks\SleepBlock\SleepBlockView.xib" />
+    <InterfaceDefinition Include="Blocks\BlockViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -119,20 +120,11 @@
     <Compile Include="RootViewController.designer.cs">
       <DependentUpon>RootViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Blocks\BlockViewCell.cs" />
     <Compile Include="Blocks\BlockListDataSource.cs" />
     <Compile Include="Blocks\BlockListDelegateLayout.cs" />
-    <Compile Include="Blocks\MoveBlock\MoveBlockViewCell.cs" />
-    <Compile Include="Blocks\MoveBlock\MoveBlockViewCell.designer.cs">
-      <DependentUpon>MoveBlockViewCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Blocks\MoveBlock\MoveBlockBuilderViewController.cs" />
     <Compile Include="Blocks\MoveBlock\MoveBlockBuilderViewController.designer.cs">
       <DependentUpon>MoveBlockBuilderViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Blocks\SleepBlock\SleepBlockViewCell.cs" />
-    <Compile Include="Blocks\SleepBlock\SleepBlockViewCell.designer.cs">
-      <DependentUpon>SleepBlockViewCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Blocks\SleepBlock\SleepBlockBuilderViewController.cs" />
     <Compile Include="Blocks\SleepBlock\SleepBlockBuilderViewController.designer.cs">
@@ -140,6 +132,19 @@
     </Compile>
     <Compile Include="Blocks\BlockBuilderViewControllerFactory.cs" />
     <Compile Include="Blocks\MoveBlock\DirectionPickerModel.cs" />
+    <Compile Include="Blocks\MoveBlock\MoveBlockView.cs" />
+    <Compile Include="Blocks\MoveBlock\MoveBlockView.designer.cs">
+      <DependentUpon>MoveBlockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\BlockView.cs" />
+    <Compile Include="Blocks\SleepBlock\SleepBlockView.cs" />
+    <Compile Include="Blocks\SleepBlock\SleepBlockView.designer.cs">
+      <DependentUpon>SleepBlockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\BlockViewCell.cs" />
+    <Compile Include="Blocks\BlockViewCell.designer.cs">
+      <DependentUpon>BlockViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoreBotProgrammer.Core\MoreBotProgrammer.Core.csproj">

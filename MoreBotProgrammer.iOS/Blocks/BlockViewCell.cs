@@ -1,25 +1,67 @@
 ﻿using System;
 using CoreGraphics;
+using Foundation;
 using MoreBotProgrammer.Core;
 using UIKit;
 
 namespace MoreBotProgrammer.iOS
 {
-    public abstract class BlockViewCell : UICollectionViewCell
+    public partial class BlockViewCell : UICollectionViewCell
     {
-        protected BlockViewCell(IntPtr handle) : base(handle)
+        public static readonly NSString Key = new NSString("BlockViewCell");
+        public static readonly UINib Nib;
+
+        static BlockViewCell()
         {
+            Nib = UINib.FromName("BlockViewCell", NSBundle.MainBundle);
         }
 
-        public abstract BlockViewModel BlockViewModel { get; }
-
-        public abstract void SetViewModel(BlockViewModel blockViewModel);
-
-        protected void OnAwake(UIView container)
+        protected BlockViewCell(IntPtr handle) : base(handle)
         {
-            container.Layer.ShadowOffset = new CGSize(2, 2);
-            container.Layer.ShadowColor = UIColor.Black.CGColor;
-            container.Layer.ShadowOpacity = 0.5f;
+            // Note: this .ctor should not contain any initialization logic.
+        }
+
+        public BlockViewModel BlockViewModel { get; private set; }
+
+        public override void AwakeFromNib()
+        {
+            base.AwakeFromNib();
+
+            cellContainer.Layer.ShadowOffset = new CGSize(2, 2);
+            cellContainer.Layer.ShadowColor = UIColor.Black.CGColor;
+            cellContainer.Layer.ShadowOpacity = 0.5f;
+        }
+
+        public void SetViewModel(BlockViewModel viewModel)
+        {
+            BlockViewModel = viewModel;
+
+            BlockView blockView = null;
+            if (cellContainer.Subviews.Length > 0) {
+                blockView = cellContainer.Subviews[0] as BlockView;
+                if (blockView != null && (blockView.BlockViewModel == null || blockView.BlockViewModel.BlockType != viewModel.BlockType)) {
+                    blockView.RemoveFromSuperview();
+                    blockView = null;
+                }
+            }
+
+            if (blockView == null) {
+                blockView = BlockView.Create(viewModel.BlockType);
+            }
+
+            if (blockView.Superview != cellContainer) {
+                blockView.TranslatesAutoresizingMaskIntoConstraints = false;
+                cellContainer.Add(blockView);
+
+                var topConstraint = NSLayoutConstraint.Create(blockView, NSLayoutAttribute.Top, NSLayoutRelation.Equal, cellContainer, NSLayoutAttribute.Top, 1, 0);
+                var bottomConstraint = NSLayoutConstraint.Create(blockView, NSLayoutAttribute.Bottom, NSLayoutRelation.Equal, cellContainer, NSLayoutAttribute.Bottom, 1, 0);
+                var leadingConstraint = NSLayoutConstraint.Create(blockView, NSLayoutAttribute.Leading, NSLayoutRelation.Equal, cellContainer, NSLayoutAttribute.Leading, 1, 0);
+                var trailingConstraint = NSLayoutConstraint.Create(blockView, NSLayoutAttribute.Trailing, NSLayoutRelation.Equal, cellContainer, NSLayoutAttribute.Trailing, 1, 0);
+
+                cellContainer.AddConstraints(new[] { topConstraint, bottomConstraint, leadingConstraint, trailingConstraint });
+            }
+
+            blockView.SetViewModel(viewModel);
         }
     }
 }

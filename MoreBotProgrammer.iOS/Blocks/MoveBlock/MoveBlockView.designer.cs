@@ -7,16 +7,13 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace MoreBotProgrammer.iOS
 {
-    [Register ("MoveBlockViewCell")]
-    partial class MoveBlockViewCell
+    [Register ("MoveBlockView")]
+    partial class MoveBlockView
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIView cellContainer { get; set; }
-
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel directionLabel { get; set; }
@@ -27,11 +24,6 @@ namespace MoreBotProgrammer.iOS
 
         void ReleaseDesignerOutlets ()
         {
-            if (cellContainer != null) {
-                cellContainer.Dispose ();
-                cellContainer = null;
-            }
-
             if (directionLabel != null) {
                 directionLabel.Dispose ();
                 directionLabel = null;

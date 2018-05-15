@@ -10,27 +10,18 @@ using System.CodeDom.Compiler;
 
 namespace MoreBotProgrammer.iOS
 {
-    [Register ("SleepBlockViewCell")]
-    partial class SleepBlockViewCell
+    [Register ("BlockViewCell")]
+    partial class BlockViewCell
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView cellContainer { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel sleepLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
             if (cellContainer != null) {
                 cellContainer.Dispose ();
                 cellContainer = null;
-            }
-
-            if (sleepLabel != null) {
-                sleepLabel.Dispose ();
-                sleepLabel = null;
             }
         }
     }
