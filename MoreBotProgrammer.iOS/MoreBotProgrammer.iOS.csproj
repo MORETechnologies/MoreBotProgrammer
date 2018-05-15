@@ -94,6 +94,7 @@
     <Folder Include="Blocks\" />
     <Folder Include="Blocks\MoveBlock\" />
     <Folder Include="Blocks\SleepBlock\" />
+    <Folder Include="BlockList\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -120,8 +121,6 @@
     <Compile Include="RootViewController.designer.cs">
       <DependentUpon>RootViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Blocks\BlockListDataSource.cs" />
-    <Compile Include="Blocks\BlockListDelegateLayout.cs" />
     <Compile Include="Blocks\MoveBlock\MoveBlockBuilderViewController.cs" />
     <Compile Include="Blocks\MoveBlock\MoveBlockBuilderViewController.designer.cs">
       <DependentUpon>MoveBlockBuilderViewController.cs</DependentUpon>
@@ -145,6 +144,8 @@
     <Compile Include="Blocks\BlockViewCell.designer.cs">
       <DependentUpon>BlockViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="BlockList\BlockListDataSource.cs" />
+    <Compile Include="BlockList\BlockListDelegateLayout.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoreBotProgrammer.Core\MoreBotProgrammer.Core.csproj">
