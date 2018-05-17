@@ -41,6 +41,8 @@ namespace MoreBotProgrammer.iOS
             speedSlider.MinValue = viewModel.MinSpeed;
             speedSlider.MaxValue = viewModel.MaxSpeed;
             speedSlider.Value = viewModel.Speed;
+
+            directionPickerView.Select(viewModel.CurrentDirectionIndex, 0, false);
         }
     }
 }

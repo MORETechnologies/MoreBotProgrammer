@@ -20,5 +20,12 @@
         {
             OnBlockBuilt(this, new SleepBlock(Milliseconds));
         }
+
+        internal override void UpdateValues(Block block)
+        {
+            SleepBlock sleepBlock = (SleepBlock)block;
+
+            Milliseconds = sleepBlock.Milliseconds;
+        }
     }
 }

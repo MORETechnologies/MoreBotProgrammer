@@ -8,6 +8,8 @@ namespace MoreBotProgrammer.Core
 
         internal event EventHandler<Block> BlockBuilt;
 
+        internal abstract void UpdateValues(Block block);
+
         internal void OnBlockBuilt(object sender, Block block)
         {
             BlockBuilt?.Invoke(sender, block);

@@ -13,5 +13,15 @@
 
             return null;
         }
+
+        public BlockBuilderViewModel CreateBlockBuilderViewModel(Block block)
+        {
+            BlockBuilderViewModel builder = CreateBlockBuilderViewModel(block.BlockType);
+            if (builder != null) {
+                builder.UpdateValues(block);
+            }
+
+            return builder;
+        }
     }
 }

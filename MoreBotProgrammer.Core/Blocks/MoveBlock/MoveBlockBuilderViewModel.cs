@@ -27,6 +27,8 @@ namespace MoreBotProgrammer.Core
 
         public int MinSpeed => 0;
 
+        public int CurrentDirectionIndex => (int)currentDirection;
+
         public override BlockType BlockType => BlockType.Move;
 
         public void ChangeDirection(int index)
@@ -54,6 +56,14 @@ namespace MoreBotProgrammer.Core
         public void Save()
         {
             OnBlockBuilt(this, new MoveBlock(currentDirection, Speed));
+        }
+
+        internal override void UpdateValues(Block block)
+        {
+            MoveBlock moveBlock = (MoveBlock)block;
+
+            currentDirection = moveBlock.Direction;
+            Speed = moveBlock.Speed;
         }
     }
 }

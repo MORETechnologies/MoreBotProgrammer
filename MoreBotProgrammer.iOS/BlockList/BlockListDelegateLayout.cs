@@ -21,5 +21,10 @@ namespace MoreBotProgrammer.iOS
             float height = viewModel.BlockViewModels[indexPath.Row].Lines * HeightPerLine;
             return new CGSize(collectionView.Frame.Width, height);
         }
+
+        public override void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
+        {
+            viewModel.EditBlock(viewModel.BlockViewModels[indexPath.Row]);
+        }
     }
 }
