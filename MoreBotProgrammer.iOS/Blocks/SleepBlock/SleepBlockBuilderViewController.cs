@@ -27,6 +27,10 @@ namespace MoreBotProgrammer.iOS
                 }
                 viewModel.Save();
             };
+
+            deleteButton.TouchUpInside += (sender, e) => {
+                viewModel.Delete();
+            };
         }
 
         public override void DidReceiveMemoryWarning()

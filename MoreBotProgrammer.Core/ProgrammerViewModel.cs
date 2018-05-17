@@ -34,16 +34,11 @@ namespace MoreBotProgrammer.Core
                 AddBlock(e);
                 BlockBuilderRemoved?.Invoke(this, blockBuilder);
             };
+            blockBuilder.BlockDeleted += (sender, e) => {
+                BlockBuilderRemoved?.Invoke(this, blockBuilder);
+            };
 
             BlockBuilderAdded?.Invoke(this, blockBuilder);
-        }
-
-        public void RemoveBlock(BlockViewModel block)
-        {
-            blocks.Remove(block.Block);
-            blockViewModels.Remove(block);
-
-            BlocksChanged?.Invoke(this, EventArgs.Empty);
         }
 
         public void EditBlock(BlockViewModel blockViewModel)
@@ -51,6 +46,10 @@ namespace MoreBotProgrammer.Core
             BlockBuilderViewModel blockBuilder = blockBuilderViewModelFactory.CreateBlockBuilderViewModel(blockViewModel.Block);
             blockBuilder.BlockBuilt += (sender, e) => {
                 ReplaceBlock(blockViewModel.Block, e);
+                BlockBuilderRemoved?.Invoke(this, blockBuilder);
+            };
+            blockBuilder.BlockDeleted += (sender, e) => {
+                RemoveBlock(e);
                 BlockBuilderRemoved?.Invoke(this, blockBuilder);
             };
 
@@ -71,6 +70,17 @@ namespace MoreBotProgrammer.Core
             if (index >= 0) {
                 blocks[index] = newBlock;
                 blockViewModels[index] = blockViewModelFactory.CreateBlockViewModel(newBlock);
+
+                BlocksChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        void RemoveBlock(Block block)
+        {
+            int index = blocks.FindIndex(b => b == block);
+            if (index >= 0) {
+                blocks.RemoveAt(index);
+                blockViewModels.RemoveAt(index);
 
                 BlocksChanged?.Invoke(this, EventArgs.Empty);
             }

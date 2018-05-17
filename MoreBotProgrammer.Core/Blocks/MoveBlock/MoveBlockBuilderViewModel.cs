@@ -4,6 +4,7 @@ namespace MoreBotProgrammer.Core
 {
     public class MoveBlockBuilderViewModel : BlockBuilderViewModel
     {
+        private Block currentBlock;
         private MoveDirection currentDirection;
 
         internal MoveBlockBuilderViewModel()
@@ -53,9 +54,14 @@ namespace MoreBotProgrammer.Core
             }
         }
 
-        public void Save()
+        public override void Save()
         {
             OnBlockBuilt(this, new MoveBlock(currentDirection, Speed));
+        }
+
+        public override void Delete()
+        {
+            OnBlockDelete(this, currentBlock);
         }
 
         internal override void UpdateValues(Block block)
@@ -64,6 +70,8 @@ namespace MoreBotProgrammer.Core
 
             currentDirection = moveBlock.Direction;
             Speed = moveBlock.Speed;
+
+            currentBlock = block;
         }
     }
 }

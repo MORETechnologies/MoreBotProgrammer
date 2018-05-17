@@ -16,6 +16,10 @@ namespace MoreBotProgrammer.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton deleteButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton saveButton { get; set; }
 
         [Outlet]
@@ -24,6 +28,11 @@ namespace MoreBotProgrammer.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (deleteButton != null) {
+                deleteButton.Dispose ();
+                deleteButton = null;
+            }
+
             if (saveButton != null) {
                 saveButton.Dispose ();
                 saveButton = null;

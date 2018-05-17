@@ -2,6 +2,8 @@
 {
     public class SleepBlockBuilderViewModel : BlockBuilderViewModel
     {
+        private Block currentBlock;
+
         public SleepBlockBuilderViewModel()
         {
             Milliseconds = 1000;
@@ -16,9 +18,14 @@
             Milliseconds = milliseconds;
         }
 
-        public void Save()
+        public override void Save()
         {
             OnBlockBuilt(this, new SleepBlock(Milliseconds));
+        }
+
+        public override void Delete()
+        {
+            OnBlockDelete(this, currentBlock);
         }
 
         internal override void UpdateValues(Block block)

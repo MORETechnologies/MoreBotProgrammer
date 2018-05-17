@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoveBlockBuilderViewController">
             <connections>
+                <outlet property="deleteButton" destination="dAQ-ya-Edf" id="name-outlet-dAQ-ya-Edf"/>
                 <outlet property="directionPickerView" destination="391" id="name-outlet-391"/>
                 <outlet property="saveButton" destination="174" id="name-outlet-174"/>
                 <outlet property="speedLabel" destination="169" id="name-outlet-169"/>
@@ -50,8 +52,14 @@
                     <rect key="frame" x="14" y="296" width="347" height="31"/>
                 </slider>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="174">
-                    <rect key="frame" x="16" y="358" width="343" height="30"/>
+                    <rect key="frame" x="187.5" y="358" width="171.5" height="30"/>
                     <state key="normal" title="Save"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-ya-Edf">
+                    <rect key="frame" x="16" y="358" width="171.5" height="30"/>
+                    <state key="normal" title="Delete">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,16 +67,19 @@
                 <constraint firstItem="391" firstAttribute="top" secondItem="160" secondAttribute="bottom" constant="8" id="908-cQ-BiT"/>
                 <constraint firstItem="DrF-4M-C81" firstAttribute="trailing" secondItem="391" secondAttribute="trailing" constant="16" id="GEe-9e-bhO"/>
                 <constraint firstItem="98E-UU-XbI" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="Lub-5j-2gJ"/>
+                <constraint firstItem="174" firstAttribute="leading" secondItem="DrF-4M-C81" secondAttribute="centerX" id="Mpl-IF-Ya2"/>
+                <constraint firstItem="dAQ-ya-Edf" firstAttribute="centerY" secondItem="174" secondAttribute="centerY" id="Qse-sX-f5s"/>
                 <constraint firstItem="169" firstAttribute="top" secondItem="391" secondAttribute="bottom" constant="32" id="RoL-Oy-RIe"/>
                 <constraint firstItem="98E-UU-XbI" firstAttribute="top" secondItem="DrF-4M-C81" secondAttribute="top" constant="16" id="Rog-3M-Wr5"/>
                 <constraint firstItem="167" firstAttribute="leading" secondItem="DrF-4M-C81" secondAttribute="leading" constant="16" id="WW7-ep-63u"/>
                 <constraint firstItem="167" firstAttribute="top" secondItem="169" secondAttribute="bottom" constant="8" id="Wfy-RZ-orP"/>
-                <constraint firstItem="174" firstAttribute="leading" secondItem="DrF-4M-C81" secondAttribute="leading" constant="16" id="eEu-ED-rYI"/>
                 <constraint firstItem="160" firstAttribute="leading" secondItem="DrF-4M-C81" secondAttribute="leading" constant="16" id="ec1-nA-Gn0"/>
+                <constraint firstItem="dAQ-ya-Edf" firstAttribute="leading" secondItem="DrF-4M-C81" secondAttribute="leading" constant="16" id="fYh-i2-d6e"/>
                 <constraint firstItem="DrF-4M-C81" firstAttribute="trailing" secondItem="174" secondAttribute="trailing" constant="16" id="mnJ-qe-OD8"/>
                 <constraint firstItem="391" firstAttribute="height" secondItem="2" secondAttribute="height" multiplier="0.2" id="nbp-GJ-ghI"/>
                 <constraint firstItem="169" firstAttribute="leading" secondItem="160" secondAttribute="leading" id="nlq-FQ-xuO"/>
                 <constraint firstItem="391" firstAttribute="leading" secondItem="160" secondAttribute="leading" id="qLC-nB-RAm"/>
+                <constraint firstItem="DrF-4M-C81" firstAttribute="centerX" secondItem="dAQ-ya-Edf" secondAttribute="trailing" id="rdx-he-UhJ"/>
                 <constraint firstItem="160" firstAttribute="top" secondItem="98E-UU-XbI" secondAttribute="bottom" constant="16" id="tv5-jA-1r0"/>
                 <constraint firstItem="DrF-4M-C81" firstAttribute="trailing" secondItem="167" secondAttribute="trailing" constant="16" id="w8h-vv-G8g"/>
                 <constraint firstItem="174" firstAttribute="top" secondItem="167" secondAttribute="bottom" constant="32" id="xhZ-wf-l5h"/>

@@ -30,6 +30,10 @@ namespace MoreBotProgrammer.iOS
                 viewModel.Save();
             };
 
+            deleteButton.TouchUpInside += (sender, e) => {
+                viewModel.Delete();
+            };
+
             viewModel.ValuesChanged += (sender, e) => {
                 UpdateView();
             };
