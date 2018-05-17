@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MoreBotProgrammer.Core
+﻿namespace MoreBotProgrammer.Core
 {
     abstract class Block
     {

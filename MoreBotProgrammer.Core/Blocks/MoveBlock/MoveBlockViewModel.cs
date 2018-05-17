@@ -2,7 +2,7 @@
 {
     public class MoveBlockViewModel : BlockViewModel
     {
-        private MoveBlock block;
+        MoveBlock block;
 
         internal MoveBlockViewModel(Block block)
         {
@@ -15,9 +15,9 @@
             get {
                 if (block.Direction == MoveDirection.Forward || block.Direction == MoveDirection.Backward) {
                     return "Move " + block.Direction.ToString();
-                } else {
-                    return "Turn " + block.Direction.ToString();
                 }
+
+                return "Turn " + block.Direction.ToString();
             }
         }
 

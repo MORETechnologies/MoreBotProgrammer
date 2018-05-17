@@ -7,7 +7,7 @@ namespace MoreBotProgrammer.iOS
 {
     public class BlockListDelegateLayout : UICollectionViewDelegateFlowLayout
     {
-        private const float HeightPerLine = 40;
+        const float HeightPerLine = 40;
 
         ProgrammerViewModel viewModel;
 

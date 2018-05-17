@@ -2,7 +2,7 @@
 {
     public class SleepBlockBuilderViewModel : BlockBuilderViewModel
     {
-        private Block currentBlock;
+        Block currentBlock;
 
         public SleepBlockBuilderViewModel()
         {
@@ -33,6 +33,8 @@
             SleepBlock sleepBlock = (SleepBlock)block;
 
             Milliseconds = sleepBlock.Milliseconds;
+
+            currentBlock = block;
         }
     }
 }

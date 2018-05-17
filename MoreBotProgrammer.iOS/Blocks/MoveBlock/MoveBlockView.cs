@@ -29,7 +29,7 @@ namespace MoreBotProgrammer.iOS
             UpdateView();
         }
 
-        private void UpdateView()
+        void UpdateView()
         {
             directionLabel.Text = viewModel.Direction;
             speedLabel.Text = viewModel.Speed;

@@ -1,5 +1,4 @@
-﻿using System;
-namespace MoreBotProgrammer.Core
+﻿namespace MoreBotProgrammer.Core
 {
     class BlockViewModelFactory
     {

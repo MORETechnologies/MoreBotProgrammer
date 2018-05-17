@@ -6,7 +6,7 @@ namespace MoreBotProgrammer.iOS
 {
     public class DirectionPickerModel : UIPickerViewModel
     {
-        private MoveBlockBuilderViewModel viewModel;
+        MoveBlockBuilderViewModel viewModel;
 
         public DirectionPickerModel(MoveBlockBuilderViewModel viewModel)
         {

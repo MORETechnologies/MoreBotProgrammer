@@ -39,7 +39,7 @@ namespace MoreBotProgrammer.iOS
             };
         }
 
-        private void UpdateView()
+        void UpdateView()
         {
             speedLabel.Text = "Speed: " + viewModel.SpeedText;
             speedSlider.MinValue = viewModel.MinSpeed;

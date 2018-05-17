@@ -4,8 +4,8 @@ namespace MoreBotProgrammer.Core
 {
     public class MoveBlockBuilderViewModel : BlockBuilderViewModel
     {
-        private Block currentBlock;
-        private MoveDirection currentDirection;
+        Block currentBlock;
+        MoveDirection currentDirection;
 
         internal MoveBlockBuilderViewModel()
         {
