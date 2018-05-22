@@ -27,6 +27,16 @@ namespace MoreBotProgrammer.iOS
             return cell;
         }
 
+        public override void MoveItem(UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
+        {
+            viewModel.SwapBlocks(sourceIndexPath.Row, destinationIndexPath.Row);
+        }
+
+        public override bool CanMoveItem(UICollectionView collectionView, NSIndexPath indexPath)
+        {
+            return true;
+        }
+
         public override nint GetItemsCount(UICollectionView collectionView, nint section)
         {
             return viewModel.BlockViewModels.Count;

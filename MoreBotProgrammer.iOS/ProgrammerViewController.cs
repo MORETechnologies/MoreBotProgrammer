@@ -26,6 +26,28 @@ namespace MoreBotProgrammer.iOS
             blockCollectionView.DataSource = dataSource;
             blockCollectionView.Delegate = new BlockListDelegateLayout(viewModel);
 
+            var longPressGesture = new UILongPressGestureRecognizer(gesture => {
+                switch (gesture.State) {
+                    case UIGestureRecognizerState.Began:
+                        var selectedIndexPath = blockCollectionView.IndexPathForItemAtPoint(gesture.LocationInView(blockCollectionView));
+                        if (selectedIndexPath != null) {
+                            blockCollectionView.BeginInteractiveMovementForItem(selectedIndexPath);
+                        }
+                        break;
+                    case UIGestureRecognizerState.Changed:
+                        blockCollectionView.UpdateInteractiveMovement(gesture.LocationInView(blockCollectionView));
+                        break;
+                    case UIGestureRecognizerState.Ended:
+                        blockCollectionView.EndInteractiveMovement();
+                        break;
+                    default:
+                        blockCollectionView.CancelInteractiveMovement();
+                        break;
+                }
+            });
+
+            blockCollectionView.AddGestureRecognizer(longPressGesture);
+
             addMoveBlockButton.TouchUpInside += (sender, e) => {
                 viewModel.AddBlock(BlockType.Move);
             };

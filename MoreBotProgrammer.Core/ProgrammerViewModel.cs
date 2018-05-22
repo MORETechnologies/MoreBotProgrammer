@@ -56,6 +56,20 @@ namespace MoreBotProgrammer.Core
             BlockBuilderAdded?.Invoke(this, blockBuilder);
         }
 
+        public void SwapBlocks(int sourceIndex, int destinationIndex)
+        {
+            Block block = blocks[sourceIndex];
+            BlockViewModel blockViewModel = blockViewModels[sourceIndex];
+
+            blocks.RemoveAt(sourceIndex);
+            blockViewModels.RemoveAt(sourceIndex);
+
+            blocks.Insert(destinationIndex, block);
+            blockViewModels.Insert(destinationIndex, blockViewModel);
+
+            BlocksChanged?.Invoke(this, EventArgs.Empty);
+        }
+
         void AddBlock(Block block)
         {
             blocks.Add(block);
