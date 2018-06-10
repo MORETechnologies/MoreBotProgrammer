@@ -1,5 +1,6 @@
-﻿using UIKit;
+﻿using Foundation;
 using MoreBotProgrammer.Core;
+using UIKit;
 
 namespace MoreBotProgrammer.iOS
 {
@@ -39,6 +40,9 @@ namespace MoreBotProgrammer.iOS
                         break;
                     case UIGestureRecognizerState.Ended:
                         blockCollectionView.EndInteractiveMovement();
+                        UIView.PerformWithoutAnimation(() => {
+                            blockCollectionView.ReloadSections(NSIndexSet.FromIndex(0));
+                        });
                         break;
                     default:
                         blockCollectionView.CancelInteractiveMovement();

@@ -59,13 +59,26 @@ namespace MoreBotProgrammer.Core
         public void SwapBlocks(int sourceIndex, int destinationIndex)
         {
             Block block = blocks[sourceIndex];
-            BlockViewModel blockViewModel = blockViewModels[sourceIndex];
-
             blocks.RemoveAt(sourceIndex);
-            blockViewModels.RemoveAt(sourceIndex);
-
             blocks.Insert(destinationIndex, block);
-            blockViewModels.Insert(destinationIndex, blockViewModel);
+
+            // Context for moved block, source, source + 1, and destination + 1 blocks possibly changed so update viewmodels
+            BlockViewModel movedBlockViewModel = blockViewModelFactory.CreateBlockViewModel(block, blocks);
+            blockViewModels.RemoveAt(sourceIndex);
+            blockViewModels.Insert(destinationIndex, movedBlockViewModel);
+
+            BlockViewModel newBlockAtSource = blockViewModelFactory.CreateBlockViewModel(blocks[sourceIndex], blocks);
+            blockViewModels[sourceIndex] = newBlockAtSource;
+
+            if (sourceIndex + 1 < blocks.Count) {
+                BlockViewModel afterSource = blockViewModelFactory.CreateBlockViewModel(blocks[sourceIndex + 1], blocks);
+                blockViewModels[sourceIndex + 1] = afterSource;
+            }
+
+            if (destinationIndex + 1 < blocks.Count) {
+                BlockViewModel afterDestination = blockViewModelFactory.CreateBlockViewModel(blocks[destinationIndex + 1], blocks);
+                blockViewModels[destinationIndex + 1] = afterDestination;
+            }
 
             BlocksChanged?.Invoke(this, EventArgs.Empty);
         }
@@ -73,7 +86,7 @@ namespace MoreBotProgrammer.Core
         void AddBlock(Block block)
         {
             blocks.Add(block);
-            blockViewModels.Add(blockViewModelFactory.CreateBlockViewModel(block));
+            blockViewModels.Add(blockViewModelFactory.CreateBlockViewModel(block, blocks));
 
             BlocksChanged?.Invoke(this, EventArgs.Empty);
         }
@@ -83,7 +96,7 @@ namespace MoreBotProgrammer.Core
             int index = blocks.FindIndex(block => block == oldBlock);
             if (index >= 0) {
                 blocks[index] = newBlock;
-                blockViewModels[index] = blockViewModelFactory.CreateBlockViewModel(newBlock);
+                blockViewModels[index] = blockViewModelFactory.CreateBlockViewModel(newBlock, blocks);
 
                 BlocksChanged?.Invoke(this, EventArgs.Empty);
             }
@@ -95,6 +108,12 @@ namespace MoreBotProgrammer.Core
             if (index >= 0) {
                 blocks.RemoveAt(index);
                 blockViewModels.RemoveAt(index);
+
+                // Create new view model to set new context blocks
+                if (index < blocks.Count) {
+                    BlockViewModel newBlockViewModel = blockViewModelFactory.CreateBlockViewModel(blocks[index], blocks);
+                    blockViewModels[index] = newBlockViewModel;
+                }
 
                 BlocksChanged?.Invoke(this, EventArgs.Empty);
             }
