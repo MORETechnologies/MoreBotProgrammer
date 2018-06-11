@@ -17,5 +17,6 @@
     <Folder Include="Blocks\MoveBlock\" />
     <Folder Include="Blocks\SleepBlock\" />
     <Folder Include="Api\" />
+    <Folder Include="Message\" />
   </ItemGroup>
 </Project>

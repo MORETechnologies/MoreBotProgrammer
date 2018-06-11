@@ -15,14 +15,5 @@
         public MoveDirection Direction { get; private set; }
 
         public int Speed { get; private set; }
-
-        class MoveCodeMessage : CodeMessage
-        {
-            public MoveCodeMessage(MoveBlock moveBlock)
-            {
-                command = "move";
-                data = (int)moveBlock.Direction + moveBlock.Speed.ToString();
-            }
-        }
     }
 }
