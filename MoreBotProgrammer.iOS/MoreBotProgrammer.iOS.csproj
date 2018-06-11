@@ -105,6 +105,7 @@
     <InterfaceDefinition Include="Blocks\MoveBlock\MoveBlockView.xib" />
     <InterfaceDefinition Include="Blocks\SleepBlock\SleepBlockView.xib" />
     <InterfaceDefinition Include="Blocks\BlockViewCell.xib" />
+    <InterfaceDefinition Include="ConnectViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -146,6 +147,10 @@
     </Compile>
     <Compile Include="BlockList\BlockListDataSource.cs" />
     <Compile Include="BlockList\BlockListDelegateLayout.cs" />
+    <Compile Include="ConnectViewController.cs" />
+    <Compile Include="ConnectViewController.designer.cs">
+      <DependentUpon>ConnectViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoreBotProgrammer.Core\MoreBotProgrammer.Core.csproj">

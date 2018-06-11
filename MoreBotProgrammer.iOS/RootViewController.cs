@@ -1,11 +1,15 @@
 ﻿using UIKit;
+using MoreBotProgrammer.Core;
 
 namespace MoreBotProgrammer.iOS
 {
     public partial class RootViewController : UIViewController
     {
+        AppMain main;
+
         public RootViewController() : base("RootViewController", null)
         {
+            main = new AppMain();
         }
 
         public override void ViewDidLoad()
@@ -20,7 +24,7 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidAppear(animated);
 
             NavigationController.PopViewController(false);
-            NavigationController.PushViewController(new ProgrammerViewController(), false);
+            NavigationController.PushViewController(new ConnectViewController(main), false);
         }
 
         public override void DidReceiveMemoryWarning()

@@ -11,6 +11,11 @@
             compiler = new Compiler(client);
         }
 
+        public ConnectViewModel GetConnectViewModel()
+        {
+            return new ConnectViewModel(this, client);
+        }
+
         public ProgrammerViewModel GetProgrammerViewModel()
         {
             return new ProgrammerViewModel(compiler);

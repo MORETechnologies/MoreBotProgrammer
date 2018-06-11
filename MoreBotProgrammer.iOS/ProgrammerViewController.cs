@@ -10,8 +10,9 @@ namespace MoreBotProgrammer.iOS
         BlockListDataSource dataSource;
         BlockBuilderViewControllerFactory blockBuilderFactory;
 
-        public ProgrammerViewController() : base("ProgrammerViewController", null)
+        public ProgrammerViewController(AppMain main) : base("ProgrammerViewController", null)
         {
+            viewModel = main.GetProgrammerViewModel();
         }
 
         public override void ViewDidLoad()
@@ -19,8 +20,6 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-            AppMain main = new AppMain();
-            viewModel = main.GetProgrammerViewModel();
             dataSource = new BlockListDataSource(viewModel);
             blockBuilderFactory = new BlockBuilderViewControllerFactory();
             blockCollectionView.RegisterNibForCell(BlockViewCell.Nib, BlockType.Move.ToString());
