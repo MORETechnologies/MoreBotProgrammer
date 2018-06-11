@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,6 +17,7 @@
                 <outlet property="addMoveBlockButton" destination="w9q-d9-nKT" id="name-outlet-w9q-d9-nKT"/>
                 <outlet property="addSleepBlockButton" destination="Sfp-OC-WND" id="name-outlet-Sfp-OC-WND"/>
                 <outlet property="blockCollectionView" destination="yjz-sf-JMp" id="name-outlet-yjz-sf-JMp"/>
+                <outlet property="runButton" destination="240" id="name-outlet-240"/>
                 <outlet property="titleLabel" destination="XUa-pU-uN7" id="name-outlet-XUa-pU-uN7"/>
                 <outlet property="view" destination="YMA-VC-Lzq" id="3hn-XS-hIH"/>
             </connections>
@@ -32,6 +33,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="240">
+                    <rect key="frame" x="337" y="28" width="30" height="30"/>
+                    <state key="normal" title="Run"/>
+                </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yjz-sf-JMp">
                     <rect key="frame" x="8" y="65" width="359" height="489.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,12 +68,14 @@
                 <constraint firstItem="XUa-pU-uN7" firstAttribute="top" secondItem="dl6-oe-4Cq" secondAttribute="top" constant="8" id="8uG-lr-WGM"/>
                 <constraint firstItem="w9q-d9-nKT" firstAttribute="top" secondItem="yjz-sf-JMp" secondAttribute="bottom" constant="8" id="Bpf-oT-Z4A"/>
                 <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="XUa-pU-uN7" secondAttribute="trailing" constant="8" id="IwT-uY-XAq"/>
+                <constraint firstItem="240" firstAttribute="top" secondItem="dl6-oe-4Cq" secondAttribute="top" constant="8" id="M0b-WB-bjX"/>
                 <constraint firstItem="w9q-d9-nKT" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" constant="8" id="NDi-Fs-8uw"/>
                 <constraint firstItem="Sfp-OC-WND" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="centerX" constant="8" id="Rym-sB-jbB"/>
                 <constraint firstItem="yjz-sf-JMp" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" constant="8" id="Tiy-a2-WAP"/>
                 <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="yjz-sf-JMp" secondAttribute="trailing" constant="8" id="Uhv-hj-OPJ"/>
                 <constraint firstItem="yjz-sf-JMp" firstAttribute="top" secondItem="XUa-pU-uN7" secondAttribute="bottom" constant="8" id="WpJ-cu-HLw"/>
                 <constraint firstItem="dl6-oe-4Cq" firstAttribute="bottom" secondItem="Sfp-OC-WND" secondAttribute="bottom" constant="8" id="dCB-9a-Psb"/>
+                <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="240" secondAttribute="trailing" constant="8" id="dzs-Pr-KCi"/>
                 <constraint firstItem="XUa-pU-uN7" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" constant="8" id="iSI-dT-bFU"/>
                 <constraint firstItem="dl6-oe-4Cq" firstAttribute="centerX" secondItem="w9q-d9-nKT" secondAttribute="trailing" constant="8" id="oK1-xj-2RJ"/>
                 <constraint firstItem="dl6-oe-4Cq" firstAttribute="bottom" secondItem="w9q-d9-nKT" secondAttribute="bottom" constant="8" id="uKa-pn-cBP"/>

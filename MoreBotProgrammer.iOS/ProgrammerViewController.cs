@@ -71,6 +71,12 @@ namespace MoreBotProgrammer.iOS
             viewModel.BlockBuilderRemoved += (sender, e) => {
                 NavigationController.PopViewController(true);
             };
+
+            runButton.TouchUpInside += async (sender, e) => {
+                runButton.Enabled = false;
+                await viewModel.Run();
+                runButton.Enabled = true;
+            };
         }
 
         public override void DidReceiveMemoryWarning()

@@ -28,6 +28,10 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton runButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel titleLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -45,6 +49,11 @@ namespace MoreBotProgrammer.iOS
             if (blockCollectionView != null) {
                 blockCollectionView.Dispose ();
                 blockCollectionView = null;
+            }
+
+            if (runButton != null) {
+                runButton.Dispose ();
+                runButton = null;
             }
 
             if (titleLabel != null) {
