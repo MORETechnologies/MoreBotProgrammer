@@ -19,7 +19,8 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-            viewModel = new ProgrammerViewModel();
+            AppMain main = new AppMain();
+            viewModel = main.GetProgrammerViewModel();
             dataSource = new BlockListDataSource(viewModel);
             blockBuilderFactory = new BlockBuilderViewControllerFactory();
             blockCollectionView.RegisterNibForCell(BlockViewCell.Nib, BlockType.Move.ToString());

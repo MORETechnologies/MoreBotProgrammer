@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MoreBotProgrammer.Core
 {
@@ -9,9 +10,12 @@ namespace MoreBotProgrammer.Core
         BlockBuilderViewModelFactory blockBuilderViewModelFactory;
         List<Block> blocks;
         List<BlockViewModel> blockViewModels;
+        Compiler compiler;
 
-        public ProgrammerViewModel()
+        internal ProgrammerViewModel(Compiler compiler)
         {
+            this.compiler = compiler;
+
             blockViewModelFactory = new BlockViewModelFactory();
             blockBuilderViewModelFactory = new BlockBuilderViewModelFactory();
 
@@ -24,6 +28,8 @@ namespace MoreBotProgrammer.Core
         public event EventHandler<BlockBuilderViewModel> BlockBuilderAdded;
 
         public event EventHandler<BlockBuilderViewModel> BlockBuilderRemoved;
+
+        public event EventHandler<bool> CompilingStateChanged;
 
         public IReadOnlyList<BlockViewModel> BlockViewModels => blockViewModels;
 
@@ -81,6 +87,15 @@ namespace MoreBotProgrammer.Core
             }
 
             BlocksChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        public async Task Run()
+        {
+            CompilingStateChanged?.Invoke(this, true);
+
+            await compiler.Compile(blocks);
+
+            CompilingStateChanged?.Invoke(this, false);
         }
 
         void AddBlock(Block block)
