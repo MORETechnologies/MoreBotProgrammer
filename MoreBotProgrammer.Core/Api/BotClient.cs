@@ -51,7 +51,7 @@ namespace MoreBotProgrammer.Core
 
                 await messageSemaphore.WaitAsync();
                 await networkStream.WriteAsync(buffer, 0, buffer.Length);
-                await Task.Delay(buffer.Length * 2);
+                await Task.Delay(buffer.Length * 2 + 100);
 
                 messageSemaphore.Release();
             } else {
@@ -64,7 +64,7 @@ namespace MoreBotProgrammer.Core
             client.Close();
         }
 
-        private TcpClient CreatTcpClient()
+        TcpClient CreatTcpClient()
         {
             TcpClient client = new TcpClient();
             client.NoDelay = true;
