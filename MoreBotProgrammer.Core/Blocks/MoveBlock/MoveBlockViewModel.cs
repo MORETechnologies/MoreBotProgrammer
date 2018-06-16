@@ -13,15 +13,19 @@
 
         public string Direction {
             get {
-                if (block.Direction == MoveDirection.Forward || block.Direction == MoveDirection.Backward) {
-                    return "Move " + block.Direction.ToString();
+                if (block.Direction == MoveDirection.Left || block.Direction == MoveDirection.Right) {
+                    return "Turn " + block.Direction.ToString();
                 }
 
-                return "Turn " + block.Direction.ToString();
+                if (block.Direction == MoveDirection.Stop) {
+                    return "Stop";
+                }
+
+                return "Move " + block.Direction.ToString();
             }
         }
 
-        public string Speed => "at " + block.Speed + "% speed";
+        public string Speed => block.Direction != MoveDirection.Stop ? "at " + block.Speed + "% speed" : "moving";
 
         public override int Lines => 2;
 
