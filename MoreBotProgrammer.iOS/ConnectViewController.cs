@@ -20,9 +20,6 @@ namespace MoreBotProgrammer.iOS
 
             NavigationController?.SetNavigationBarHidden(true, false);
 
-            hostField.Text = viewModel.Host;
-            portField.Text = viewModel.Port;
-
             statusLabel.Text = "";
 
             viewModel.StatusChanged += (sender, text) => {
@@ -31,8 +28,16 @@ namespace MoreBotProgrammer.iOS
 
             connectButton.TouchUpInside += async (sender, e) => {
                 connectButton.Enabled = false;
-                if (await viewModel.Connect(hostField.Text, portField.Text)) {
-                    NavigationController.PushViewController(new ProgrammerViewController(main), true);
+                if (wifiNameField.Text.ToLower() == "test") {
+                    if (await viewModel.Connect("test", viewModel.Port)) {
+                        NavigationController.PushViewController(new ProgrammerViewController(main), true);
+                    }
+                } else {
+                    statusLabel.Text = "Connecting...";
+                    await WifiConnector.Connect(wifiNameField.Text, null);
+                    if (await viewModel.Connect(viewModel.Host, viewModel.Port)) {
+                        NavigationController.PushViewController(new ProgrammerViewController(main), true);
+                    }
                 }
                 connectButton.Enabled = true;
             };

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,10 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConnectViewController">
             <connections>
                 <outlet property="connectButton" destination="209" id="name-outlet-209"/>
-                <outlet property="hostField" destination="207" id="name-outlet-207"/>
-                <outlet property="portField" destination="208" id="name-outlet-208"/>
                 <outlet property="statusLabel" destination="210" id="name-outlet-210"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+                <outlet property="wifiNameField" destination="451" id="name-outlet-451"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,24 +23,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bot Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="207">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TestCompiler" borderStyle="roundedRect" placeholder="MOREbot Wifi Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="451">
                     <rect key="frame" x="16" y="36" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Port" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="208">
-                    <rect key="frame" x="203.5" y="82" width="155.5" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                    <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="209">
-                    <rect key="frame" x="16" y="144" width="343" height="30"/>
+                    <rect key="frame" x="16" y="98" width="343" height="30"/>
                     <state key="normal" title="Connect"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="210">
-                    <rect key="frame" x="16" y="190" width="343" height="17"/>
+                    <rect key="frame" x="16" y="144" width="343" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -50,18 +42,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="207" firstAttribute="top" secondItem="xed-iO-bDb" secondAttribute="top" constant="16" id="4x6-80-AsL"/>
+                <constraint firstItem="209" firstAttribute="top" secondItem="451" secondAttribute="bottom" constant="32" id="9fZ-bg-eHu"/>
+                <constraint firstItem="451" firstAttribute="leading" secondItem="xed-iO-bDb" secondAttribute="leading" constant="16" id="BwR-QU-w9N"/>
                 <constraint firstItem="xed-iO-bDb" firstAttribute="trailing" secondItem="209" secondAttribute="trailing" constant="16" id="IT4-Qt-tkc"/>
+                <constraint firstItem="451" firstAttribute="top" secondItem="xed-iO-bDb" secondAttribute="top" constant="16" id="KWq-bT-ZZW"/>
                 <constraint firstItem="xed-iO-bDb" firstAttribute="trailing" secondItem="210" secondAttribute="trailing" constant="16" id="XuW-Oo-Qtg"/>
                 <constraint firstItem="209" firstAttribute="leading" secondItem="xed-iO-bDb" secondAttribute="leading" constant="16" id="Ypt-Ua-Uws"/>
-                <constraint firstItem="207" firstAttribute="leading" secondItem="xed-iO-bDb" secondAttribute="leading" constant="16" id="g7i-Xj-l7D"/>
-                <constraint firstItem="209" firstAttribute="top" secondItem="208" secondAttribute="bottom" constant="32" id="gUl-pC-6gl"/>
                 <constraint firstItem="210" firstAttribute="leading" secondItem="xed-iO-bDb" secondAttribute="leading" constant="16" id="idQ-5p-d0w"/>
-                <constraint firstItem="208" firstAttribute="top" secondItem="207" secondAttribute="bottom" constant="16" id="nl5-zt-IEf"/>
-                <constraint firstItem="xed-iO-bDb" firstAttribute="trailing" secondItem="207" secondAttribute="trailing" constant="16" id="q6a-tP-bzP"/>
-                <constraint firstItem="208" firstAttribute="leading" secondItem="xed-iO-bDb" secondAttribute="centerX" constant="16" id="rUE-2w-LmS"/>
+                <constraint firstItem="xed-iO-bDb" firstAttribute="trailing" secondItem="451" secondAttribute="trailing" constant="16" id="jUv-8J-mel"/>
                 <constraint firstItem="210" firstAttribute="top" secondItem="209" secondAttribute="bottom" constant="16" id="wQZ-Vn-LI9"/>
-                <constraint firstItem="208" firstAttribute="trailing" secondItem="207" secondAttribute="trailing" id="ysY-0a-WJO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="xed-iO-bDb"/>
         </view>

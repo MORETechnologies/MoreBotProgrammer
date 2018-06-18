@@ -20,15 +20,11 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField hostField { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField portField { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel statusLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField wifiNameField { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -37,19 +33,14 @@ namespace MoreBotProgrammer.iOS
                 connectButton = null;
             }
 
-            if (hostField != null) {
-                hostField.Dispose ();
-                hostField = null;
-            }
-
-            if (portField != null) {
-                portField.Dispose ();
-                portField = null;
-            }
-
             if (statusLabel != null) {
                 statusLabel.Dispose ();
                 statusLabel = null;
+            }
+
+            if (wifiNameField != null) {
+                wifiNameField.Dispose ();
+                wifiNameField = null;
             }
         }
     }
