@@ -10,7 +10,7 @@
     <Compile Remove="App.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="System.Reactive" Version="4.0.0-preview00001" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Blocks\" />
