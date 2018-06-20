@@ -32,7 +32,11 @@ namespace MoreBotProgrammer.Core
 
         public UserProgramEntity Read()
         {
-            string json = File.ReadAllText(FileName);
+            string json = "";
+            if (File.Exists(filePath)) {
+                json = File.ReadAllText(filePath);
+            }
+
             return JsonConvert.DeserializeObject<UserProgramEntity>(json, settings);
         }
     }
