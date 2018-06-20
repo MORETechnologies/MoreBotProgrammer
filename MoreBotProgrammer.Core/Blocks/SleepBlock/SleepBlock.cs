@@ -12,5 +12,10 @@
         public override CodeMessage CodeMessage => new SleepCodeMessage(this);
 
         public int Milliseconds { get; private set; }
+
+        public override BlockEntity ToEntity()
+        {
+            return new SleepBlockEntity(this);
+        }
     }
 }

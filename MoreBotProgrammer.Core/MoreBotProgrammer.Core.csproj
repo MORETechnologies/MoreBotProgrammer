@@ -18,5 +18,6 @@
     <Folder Include="Blocks\SleepBlock\" />
     <Folder Include="Api\" />
     <Folder Include="Message\" />
+    <Folder Include="Storage\" />
   </ItemGroup>
 </Project>

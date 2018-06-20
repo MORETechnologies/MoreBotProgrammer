@@ -15,5 +15,10 @@
         public MoveDirection Direction { get; private set; }
 
         public int Speed { get; private set; }
+
+        public override BlockEntity ToEntity()
+        {
+            return new MoveBlockEntity(this);
+        }
     }
 }
