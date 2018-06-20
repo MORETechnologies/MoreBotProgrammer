@@ -6,22 +6,27 @@ namespace MoreBotProgrammer.Core
 {
     class UserProgramEntity
     {
-        IEnumerable<BlockEntity> blockEntities;
+        List<BlockEntity> blockEntities;
+
+        public UserProgramEntity()
+        {
+            // So json can deserialize
+            blockEntities = new List<BlockEntity>();
+        }
 
         public string Name { get; set; }
 
         public DateTime LastModified { get; set; }
 
         public IEnumerable<BlockEntity> BlockEntities {
-            get {
-                if (blockEntities == null) {
-                    return Enumerable.Empty<BlockEntity>();
+            get { return blockEntities; }
+
+            set {
+                blockEntities.Clear();
+                if (value != null) {
+                    blockEntities.AddRange(value);
                 }
-
-                return blockEntities;
             }
-
-            set { blockEntities = value; }
         }
 
         public IEnumerable<Block> GetBlocks()

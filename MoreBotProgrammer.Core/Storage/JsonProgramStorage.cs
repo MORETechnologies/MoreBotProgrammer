@@ -37,7 +37,11 @@ namespace MoreBotProgrammer.Core
                 json = File.ReadAllText(filePath);
             }
 
-            return JsonConvert.DeserializeObject<UserProgramEntity>(json, settings);
+            try {
+                return JsonConvert.DeserializeObject<UserProgramEntity>(json, settings);
+            } catch (JsonSerializationException) {
+                return null;
+            }
         }
     }
 }
