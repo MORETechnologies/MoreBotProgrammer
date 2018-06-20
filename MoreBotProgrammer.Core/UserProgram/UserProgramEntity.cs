@@ -6,21 +6,23 @@ namespace MoreBotProgrammer.Core
 {
     class UserProgramEntity
     {
-        public UserProgramEntity()
-        {
-        }
-
-        public UserProgramEntity(string name, IEnumerable<Block> blocks)
-        {
-            Name = name;
-            BlockEntities = blocks.Select(block => block.ToEntity());
-        }
+        IEnumerable<BlockEntity> blockEntities;
 
         public string Name { get; set; }
 
         public DateTime LastModified { get; set; }
 
-        public IEnumerable<BlockEntity> BlockEntities { get; set; }
+        public IEnumerable<BlockEntity> BlockEntities {
+            get {
+                if (blockEntities == null) {
+                    return Enumerable.Empty<BlockEntity>();
+                }
+
+                return blockEntities;
+            }
+
+            set { blockEntities = value; }
+        }
 
         public IEnumerable<Block> GetBlocks()
         {
