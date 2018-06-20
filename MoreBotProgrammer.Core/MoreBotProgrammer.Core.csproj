@@ -19,5 +19,6 @@
     <Folder Include="Api\" />
     <Folder Include="Message\" />
     <Folder Include="Storage\" />
+    <Folder Include="UserProgram\" />
   </ItemGroup>
 </Project>
