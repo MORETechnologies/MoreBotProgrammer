@@ -20,6 +20,12 @@ namespace MoreBotProgrammer.Core
         {
             if (userProgramEntity == null) {
                 userProgramEntity = storage.Read();
+                if (userProgramEntity == null) {
+                    userProgramEntity = new UserProgramEntity {
+                        Name = DefaultName,
+                        LastModified = DateTime.UtcNow
+                    };
+                }
             }
 
             return userProgramEntity.BlockEntities.Select(b => b.ToBlock());

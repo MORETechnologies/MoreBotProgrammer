@@ -1,5 +1,6 @@
-﻿using UIKit;
+﻿using System;
 using MoreBotProgrammer.Core;
+using UIKit;
 
 namespace MoreBotProgrammer.iOS
 {
@@ -9,7 +10,7 @@ namespace MoreBotProgrammer.iOS
 
         public RootViewController() : base("RootViewController", null)
         {
-            main = new AppMain();
+            main = new AppMain(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
         }
 
         public override void ViewDidLoad()

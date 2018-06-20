@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MoreBotProgrammer.Core
@@ -11,16 +12,18 @@ namespace MoreBotProgrammer.Core
         List<Block> blocks;
         List<BlockViewModel> blockViewModels;
         Compiler compiler;
+        UserProgramRepository programRepository;
 
-        internal ProgrammerViewModel(Compiler compiler)
+        internal ProgrammerViewModel(Compiler compiler, UserProgramRepository programRepository)
         {
             this.compiler = compiler;
+            this.programRepository = programRepository;
 
             blockViewModelFactory = new BlockViewModelFactory();
             blockBuilderViewModelFactory = new BlockBuilderViewModelFactory();
 
-            blocks = new List<Block>();
-            blockViewModels = new List<BlockViewModel>();
+            blocks = programRepository.GetBlocks().ToList();
+            blockViewModels = blocks.Select(b => blockViewModelFactory.CreateBlockViewModel(b, blocks)).ToList();
         }
 
         public event EventHandler BlocksChanged;
@@ -86,6 +89,7 @@ namespace MoreBotProgrammer.Core
                 blockViewModels[destinationIndex + 1] = afterDestination;
             }
 
+            programRepository.Update(blocks);
             BlocksChanged?.Invoke(this, EventArgs.Empty);
         }
 
@@ -103,6 +107,7 @@ namespace MoreBotProgrammer.Core
             blocks.Add(block);
             blockViewModels.Add(blockViewModelFactory.CreateBlockViewModel(block, blocks));
 
+            programRepository.Update(blocks);
             BlocksChanged?.Invoke(this, EventArgs.Empty);
         }
 
@@ -113,6 +118,7 @@ namespace MoreBotProgrammer.Core
                 blocks[index] = newBlock;
                 blockViewModels[index] = blockViewModelFactory.CreateBlockViewModel(newBlock, blocks);
 
+                programRepository.Update(blocks);
                 BlocksChanged?.Invoke(this, EventArgs.Empty);
             }
         }
@@ -130,6 +136,7 @@ namespace MoreBotProgrammer.Core
                     blockViewModels[index] = newBlockViewModel;
                 }
 
+                programRepository.Update(blocks);
                 BlocksChanged?.Invoke(this, EventArgs.Empty);
             }
         }

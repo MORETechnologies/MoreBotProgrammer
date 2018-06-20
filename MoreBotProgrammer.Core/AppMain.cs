@@ -4,9 +4,12 @@
     {
         IBotClient client;
         Compiler compiler;
+        string baseDirectory;
 
-        public AppMain()
+        public AppMain(string baseDirectory)
         {
+            this.baseDirectory = baseDirectory;
+
             client = new BotClient();
             compiler = new Compiler(client);
         }
@@ -18,7 +21,7 @@
 
         public ProgrammerViewModel GetProgrammerViewModel()
         {
-            return new ProgrammerViewModel(compiler);
+            return new ProgrammerViewModel(compiler, new UserProgramRepository(new JsonProgramStorage(baseDirectory)));
         }
 
         internal void SwitchToDebugMode()
