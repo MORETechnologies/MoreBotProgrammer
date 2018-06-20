@@ -24,16 +24,16 @@ namespace MoreBotProgrammer.Core
             };
         }
 
-        public void Write(ProgramEntity program)
+        public void Write(UserProgramEntity program)
         {
             string json = JsonConvert.SerializeObject(program, settings);
             File.WriteAllText(filePath, json);
         }
 
-        public ProgramEntity Read()
+        public UserProgramEntity Read()
         {
             string json = File.ReadAllText(FileName);
-            return JsonConvert.DeserializeObject<ProgramEntity>(json, settings);
+            return JsonConvert.DeserializeObject<UserProgramEntity>(json, settings);
         }
     }
 }

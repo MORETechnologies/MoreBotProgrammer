@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace MoreBotProgrammer.Core
 {
-    class ProgramEntity
+    class UserProgramEntity
     {
-        public ProgramEntity()
+        public UserProgramEntity()
         {
         }
 
-        public ProgramEntity(string name, IEnumerable<Block> blocks)
+        public UserProgramEntity(string name, IEnumerable<Block> blocks)
         {
             Name = name;
             BlockEntities = blocks.Select(block => block.ToEntity());
