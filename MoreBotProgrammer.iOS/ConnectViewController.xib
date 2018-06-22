@@ -54,15 +54,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             </variation>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="209" customClass="MoreButton">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="209">
                             <rect key="frame" x="0.5" y="94.5" width="299.5" height="72.5"/>
+                            <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                            <state key="normal" title="Connect"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="0"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
+                            <state key="normal" title="Connect">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <variation key="heightClass=regular-widthClass=compact">
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                             </variation>
