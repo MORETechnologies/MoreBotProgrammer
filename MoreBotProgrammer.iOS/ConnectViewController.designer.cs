@@ -16,7 +16,7 @@ namespace MoreBotProgrammer.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton connectButton { get; set; }
+        MoreBotProgrammer.iOS.MoreButton connectButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,36 +23,57 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TestCompiler" borderStyle="roundedRect" placeholder="MOREbot Wifi Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="451">
-                    <rect key="frame" x="16" y="36" width="343" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="209">
-                    <rect key="frame" x="16" y="98" width="343" height="30"/>
-                    <state key="normal" title="Connect"/>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="210">
-                    <rect key="frame" x="16" y="144" width="343" height="17"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVP-Zg-k0R">
+                    <rect key="frame" x="37.5" y="260.5" width="300" height="166.5"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TestCompiler" placeholder="MOREbot Wifi Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="451">
+                            <rect key="frame" x="4" y="4" width="292" height="71"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="210">
+                            <rect key="frame" x="0.0" y="75" width="300" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="209" customClass="MoreButton">
+                            <rect key="frame" x="0.0" y="92" width="300" height="74.5"/>
+                            <state key="normal" title="Connect"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.3973236169761904" green="0.3973236169761904" blue="0.3973236169761904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="209" secondAttribute="bottom" id="1T5-ER-aab"/>
+                        <constraint firstItem="210" firstAttribute="centerY" secondItem="cVP-Zg-k0R" secondAttribute="centerY" id="3gz-LQ-Gl2"/>
+                        <constraint firstItem="451" firstAttribute="leading" secondItem="cVP-Zg-k0R" secondAttribute="leading" constant="4" id="5rL-ZQ-MFJ"/>
+                        <constraint firstItem="209" firstAttribute="leading" secondItem="cVP-Zg-k0R" secondAttribute="leading" id="VIU-fh-tha"/>
+                        <constraint firstAttribute="trailing" secondItem="209" secondAttribute="trailing" id="Y0d-MW-DdI"/>
+                        <constraint firstItem="210" firstAttribute="leading" secondItem="cVP-Zg-k0R" secondAttribute="leading" id="cnN-Cw-KtN"/>
+                        <constraint firstItem="451" firstAttribute="top" secondItem="cVP-Zg-k0R" secondAttribute="top" constant="4" id="iRw-pi-kZX"/>
+                        <constraint firstItem="209" firstAttribute="top" secondItem="210" secondAttribute="bottom" id="mnp-4t-D28"/>
+                        <constraint firstAttribute="trailing" secondItem="210" secondAttribute="trailing" id="sZ4-2q-hWE"/>
+                        <constraint firstItem="210" firstAttribute="top" secondItem="451" secondAttribute="bottom" id="vkm-Fp-jDq"/>
+                        <constraint firstAttribute="trailing" secondItem="451" secondAttribute="trailing" constant="4" id="yMv-9g-eRa"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="209" firstAttribute="top" secondItem="451" secondAttribute="bottom" constant="32" id="9fZ-bg-eHu"/>
-                <constraint firstItem="451" firstAttribute="leading" secondItem="xed-iO-bDb" secondAttribute="leading" constant="16" id="BwR-QU-w9N"/>
-                <constraint firstItem="xed-iO-bDb" firstAttribute="trailing" secondItem="209" secondAttribute="trailing" constant="16" id="IT4-Qt-tkc"/>
-                <constraint firstItem="451" firstAttribute="top" secondItem="xed-iO-bDb" secondAttribute="top" constant="16" id="KWq-bT-ZZW"/>
-                <constraint firstItem="xed-iO-bDb" firstAttribute="trailing" secondItem="210" secondAttribute="trailing" constant="16" id="XuW-Oo-Qtg"/>
-                <constraint firstItem="209" firstAttribute="leading" secondItem="xed-iO-bDb" secondAttribute="leading" constant="16" id="Ypt-Ua-Uws"/>
-                <constraint firstItem="210" firstAttribute="leading" secondItem="xed-iO-bDb" secondAttribute="leading" constant="16" id="idQ-5p-d0w"/>
-                <constraint firstItem="xed-iO-bDb" firstAttribute="trailing" secondItem="451" secondAttribute="trailing" constant="16" id="jUv-8J-mel"/>
-                <constraint firstItem="210" firstAttribute="top" secondItem="209" secondAttribute="bottom" constant="16" id="wQZ-Vn-LI9"/>
+                <constraint firstItem="cVP-Zg-k0R" firstAttribute="width" secondItem="2" secondAttribute="width" multiplier="0.8" id="5NQ-Tz-Z0J"/>
+                <constraint firstItem="cVP-Zg-k0R" firstAttribute="height" secondItem="2" secondAttribute="height" multiplier="0.25" id="O8b-f2-rkK"/>
+                <constraint firstItem="cVP-Zg-k0R" firstAttribute="centerY" secondItem="xed-iO-bDb" secondAttribute="centerY" id="fFg-dM-n1V"/>
+                <constraint firstItem="cVP-Zg-k0R" firstAttribute="centerX" secondItem="xed-iO-bDb" secondAttribute="centerX" id="sBe-ZE-lyE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="xed-iO-bDb"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>
