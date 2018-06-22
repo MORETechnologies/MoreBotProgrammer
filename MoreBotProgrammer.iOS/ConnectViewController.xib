@@ -24,29 +24,39 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVP-Zg-k0R">
-                    <rect key="frame" x="37.5" y="260.5" width="300" height="166.5"/>
+                    <rect key="frame" x="37.5" y="260" width="300" height="167"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TestCompiler" placeholder="MOREbot Wifi Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="451">
-                            <rect key="frame" x="4" y="4" width="292" height="71"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TestCompiler" placeholder="MOREbot Wifi Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="451">
+                            <rect key="frame" x="4" y="4" width="292" height="69"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="62"/>
                             <textInputTraits key="textInputTraits"/>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            </variation>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="210">
-                            <rect key="frame" x="0.0" y="75" width="300" height="17"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="210">
+                            <rect key="frame" x="0.0" y="73" width="300" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="209" customClass="MoreButton">
-                            <rect key="frame" x="0.0" y="92" width="300" height="74.5"/>
+                            <rect key="frame" x="0.0" y="94.5" width="300" height="72.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="100"/>
                             <state key="normal" title="Connect"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="0"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                            </variation>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.3973236169761904" green="0.3973236169761904" blue="0.3973236169761904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
