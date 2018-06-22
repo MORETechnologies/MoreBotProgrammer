@@ -27,9 +27,12 @@ namespace MoreBotProgrammer.iOS
         {
             base.AwakeFromNib();
 
-            cellContainer.Layer.ShadowOffset = new CGSize(2, 2);
-            cellContainer.Layer.ShadowColor = UIColor.Black.CGColor;
-            cellContainer.Layer.ShadowOpacity = 0.5f;
+            new UIStyler.ShadowBuilder()
+                        .WithOffset(new CGSize(2, 2))
+                        .WithColor(Colors.DarkText)
+                        .WithOpacity(0.5f)
+                        .WithRadius(3)
+                        .Apply(cellContainer);
         }
 
         public void SetViewModel(BlockViewModel viewModel)

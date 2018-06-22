@@ -59,7 +59,7 @@ namespace MoreBotProgrammer.iOS
 
         void StyleUI()
         {
-            ButtonStyle.Apply(connectButton);
+            UIStyler.Style(connectButton);
         }
     }
 }
