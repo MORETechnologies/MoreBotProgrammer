@@ -156,6 +156,7 @@
     </Compile>
     <Compile Include="WifiConnector.cs" />
     <Compile Include="Colors.cs" />
+    <Compile Include="MoreButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoreBotProgrammer.Core\MoreBotProgrammer.Core.csproj">
