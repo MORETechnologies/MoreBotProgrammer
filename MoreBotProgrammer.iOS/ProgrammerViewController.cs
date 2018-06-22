@@ -20,6 +20,8 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
+            StyleUI();
+
             dataSource = new BlockListDataSource(viewModel);
             blockBuilderFactory = new BlockBuilderViewControllerFactory();
             blockCollectionView.RegisterNibForCell(BlockViewCell.Nib, BlockType.Move.ToString());
@@ -88,6 +90,12 @@ namespace MoreBotProgrammer.iOS
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
+        }
+
+        void StyleUI()
+        {
+            backButton.BackgroundColor = Colors.PrimaryDark;
+            runButton.BackgroundColor = Colors.PrimaryDark;
         }
     }
 }

@@ -33,6 +33,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="506" customClass="MoreButton">
                             <rect key="frame" x="0.0" y="0.0" width="57" height="66.5"/>
+                            <color key="backgroundColor" red="0.19560699285034022" green="0.19560699285034022" blue="0.19560699285034022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                             <state key="normal" title="Back"/>
                             <variation key="heightClass=regular-widthClass=compact">
@@ -50,6 +51,7 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="240" customClass="MoreButton">
                             <rect key="frame" x="319.5" y="0.0" width="55.5" height="66.5"/>
+                            <color key="backgroundColor" red="0.19560699285034022" green="0.19560699285034022" blue="0.19560699285034022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                             <state key="normal" title="Run"/>
                             <variation key="heightClass=regular-widthClass=compact">
@@ -57,7 +59,7 @@
                             </variation>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.19560699285034022" green="0.19560699285034022" blue="0.19560699285034022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="XUa-pU-uN7" firstAttribute="centerX" secondItem="Jdo-Tf-qbU" secondAttribute="centerX" id="2Ta-hV-7Xq"/>
                         <constraint firstItem="240" firstAttribute="top" secondItem="Jdo-Tf-qbU" secondAttribute="top" id="6Ib-eb-P7Q"/>
