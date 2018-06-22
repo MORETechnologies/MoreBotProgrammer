@@ -21,7 +21,7 @@
 
         public ProgrammerViewModel GetProgrammerViewModel()
         {
-            return new ProgrammerViewModel(compiler, new UserProgramRepository(new JsonProgramStorage(baseDirectory)));
+            return new ProgrammerViewModel(compiler, new UserProgramRepository(new JsonProgramStorage(baseDirectory)), client);
         }
 
         internal void SwitchToDebugMode()

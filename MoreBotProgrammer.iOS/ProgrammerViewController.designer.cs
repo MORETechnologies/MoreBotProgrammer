@@ -24,11 +24,15 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        MoreBotProgrammer.iOS.MoreButton backButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UICollectionView blockCollectionView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton runButton { get; set; }
+        MoreBotProgrammer.iOS.MoreButton runButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -44,6 +48,11 @@ namespace MoreBotProgrammer.iOS
             if (addSleepBlockButton != null) {
                 addSleepBlockButton.Dispose ();
                 addSleepBlockButton = null;
+            }
+
+            if (backButton != null) {
+                backButton.Dispose ();
+                backButton = null;
             }
 
             if (blockCollectionView != null) {

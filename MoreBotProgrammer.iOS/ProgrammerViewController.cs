@@ -77,6 +77,11 @@ namespace MoreBotProgrammer.iOS
                 await viewModel.Run();
                 runButton.Enabled = true;
             };
+
+            backButton.TouchUpInside += (sender, e) => {
+                viewModel.Close();
+                NavigationController.PopViewController(true);
+            };
         }
 
         public override void DidReceiveMemoryWarning()

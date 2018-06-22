@@ -13,11 +13,13 @@ namespace MoreBotProgrammer.Core
         List<BlockViewModel> blockViewModels;
         Compiler compiler;
         UserProgramRepository programRepository;
+        IBotClient botClient;
 
-        internal ProgrammerViewModel(Compiler compiler, UserProgramRepository programRepository)
+        internal ProgrammerViewModel(Compiler compiler, UserProgramRepository programRepository, IBotClient botClient)
         {
             this.compiler = compiler;
             this.programRepository = programRepository;
+            this.botClient = botClient;
 
             blockViewModelFactory = new BlockViewModelFactory();
             blockBuilderViewModelFactory = new BlockBuilderViewModelFactory();
@@ -100,6 +102,11 @@ namespace MoreBotProgrammer.Core
             await compiler.Compile(blocks);
 
             CompilingStateChanged?.Invoke(this, false);
+        }
+
+        public void Close()
+        {
+            botClient.Disconnect();
         }
 
         void AddBlock(Block block)
