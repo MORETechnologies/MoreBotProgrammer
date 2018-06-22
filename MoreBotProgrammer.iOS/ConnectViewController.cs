@@ -5,6 +5,13 @@ namespace MoreBotProgrammer.iOS
 {
     public partial class ConnectViewController : UIViewController
     {
+        const string TestWifi = "test";
+#if SIMULATOR
+        const string DefaultWifi = TestWifi;
+#else
+        const string DefaultWifi = "TestCompiler";
+#endif
+
         AppMain main;
         ConnectViewModel viewModel;
 
@@ -20,6 +27,7 @@ namespace MoreBotProgrammer.iOS
 
             NavigationController?.SetNavigationBarHidden(true, false);
 
+            wifiNameField.Text = DefaultWifi;
             statusLabel.Text = "";
 
             viewModel.StatusChanged += (sender, text) => {
@@ -28,8 +36,8 @@ namespace MoreBotProgrammer.iOS
 
             connectButton.TouchUpInside += async (sender, e) => {
                 connectButton.Enabled = false;
-                if (wifiNameField.Text.ToLower() == "test") {
-                    if (await viewModel.Connect("test", viewModel.Port)) {
+                if (wifiNameField.Text.ToLower() == TestWifi) {
+                    if (await viewModel.Connect(ConnectViewModel.TestHost, viewModel.Port)) {
                         NavigationController.PushViewController(new ProgrammerViewController(main), true);
                     }
                 } else {

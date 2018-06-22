@@ -5,6 +5,7 @@ namespace MoreBotProgrammer.Core
 {
     public class ConnectViewModel
     {
+        public const string TestHost = "test";
         const string DefaultHost = "192.168.4.1";
         const int DefaultPort = 333;
 
@@ -33,7 +34,7 @@ namespace MoreBotProgrammer.Core
             Host = host;
             Port = port;
 
-            if (host == "test") {
+            if (host == TestHost) {
                 appMain.SwitchToDebugMode();
                 StatusChanged?.Invoke(this, "");
                 return true;
