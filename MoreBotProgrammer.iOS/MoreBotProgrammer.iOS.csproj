@@ -155,6 +155,7 @@
       <DependentUpon>ConnectViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="WifiConnector.cs" />
+    <Compile Include="Colors.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoreBotProgrammer.Core\MoreBotProgrammer.Core.csproj">
