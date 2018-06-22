@@ -24,7 +24,7 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        MoreBotProgrammer.iOS.MoreButton backButton { get; set; }
+        UIKit.UIButton backButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -32,7 +32,7 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        MoreBotProgrammer.iOS.MoreButton runButton { get; set; }
+        UIKit.UIButton runButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

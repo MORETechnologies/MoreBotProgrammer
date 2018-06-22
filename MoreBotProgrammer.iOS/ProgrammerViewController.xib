@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="66.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="506">
-                            <rect key="frame" x="0.0" y="0.0" width="57" height="66.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="56" height="66.5"/>
                             <color key="backgroundColor" red="0.19560699285034022" green="0.19560699285034022" blue="0.19560699285034022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                             <state key="normal" title="Back">
@@ -43,7 +43,7 @@
                             </variation>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-pU-uN7">
-                            <rect key="frame" x="57" y="19.5" width="262.5" height="29"/>
+                            <rect key="frame" x="56.5" y="19.5" width="262" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="54"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="240">
-                            <rect key="frame" x="319.5" y="0.0" width="55.5" height="66.5"/>
+                            <rect key="frame" x="318.5" y="0.0" width="56.5" height="66.5"/>
                             <color key="backgroundColor" red="0.19560699285034022" green="0.19560699285034022" blue="0.19560699285034022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                             <state key="normal" title="Run">

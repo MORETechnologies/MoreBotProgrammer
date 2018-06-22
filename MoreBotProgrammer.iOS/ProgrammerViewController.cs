@@ -94,10 +94,7 @@ namespace MoreBotProgrammer.iOS
 
         void StyleUI()
         {
-            ButtonStyle.Apply(backButton);
-            ButtonStyle.Apply(runButton);
-            ButtonStyle.Apply(addMoveBlockButton);
-            ButtonStyle.Apply(addSleepBlockButton);
+            ButtonStyle.Apply(backButton, runButton, addMoveBlockButton, addSleepBlockButton);
 
             backButton.BackgroundColor = Colors.PrimaryDark;
             runButton.BackgroundColor = Colors.PrimaryDark;
