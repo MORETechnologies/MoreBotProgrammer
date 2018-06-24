@@ -20,6 +20,10 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.NSLayoutConstraint connectBoxCenterYConstraint { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton connectButton { get; set; }
 
         [Outlet]
@@ -35,6 +39,11 @@ namespace MoreBotProgrammer.iOS
             if (connectBox != null) {
                 connectBox.Dispose ();
                 connectBox = null;
+            }
+
+            if (connectBoxCenterYConstraint != null) {
+                connectBoxCenterYConstraint.Dispose ();
+                connectBoxCenterYConstraint = null;
             }
 
             if (connectButton != null) {

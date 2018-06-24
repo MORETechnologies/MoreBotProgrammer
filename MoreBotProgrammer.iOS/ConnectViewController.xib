@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConnectViewController">
             <connections>
                 <outlet property="connectBox" destination="cVP-Zg-k0R" id="name-outlet-cVP-Zg-k0R"/>
+                <outlet property="connectBoxCenterYConstraint" destination="fFg-dM-n1V" id="name-outlet-fFg-dM-n1V"/>
                 <outlet property="connectButton" destination="209" id="name-outlet-209"/>
                 <outlet property="statusLabel" destination="210" id="name-outlet-210"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
@@ -25,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORE Coder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3j-qr-RJu">
-                    <rect key="frame" x="37.5" y="20" width="300" height="240"/>
+                    <rect key="frame" x="37.5" y="20" width="300" height="240.5"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="90"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -34,14 +35,14 @@
                     </variation>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVP-Zg-k0R">
-                    <rect key="frame" x="37.5" y="260" width="300" height="166.5"/>
+                    <rect key="frame" x="37.5" y="260.5" width="300" height="166.5"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TestCompiler" placeholder="MOREbot Wifi Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="451">
                             <rect key="frame" x="4.5" y="4" width="291.5" height="69"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="62"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="go"/>
                             <variation key="heightClass=regular-widthClass=compact">
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             </variation>
