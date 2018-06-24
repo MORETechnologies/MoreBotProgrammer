@@ -65,10 +65,7 @@ namespace MoreBotProgrammer.iOS
             UIStyler.Style(connectButton);
 
             new UIStyler.ShadowBuilder()
-                        .WithColor(Colors.DarkText)
                         .WithOffset(new CGSize(0, 2))
-                        .WithRadius(3)
-                        .WithOpacity(0.5f)
                         .Apply(connectBox);
         }
     }

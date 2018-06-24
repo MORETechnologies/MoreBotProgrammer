@@ -100,11 +100,7 @@ namespace MoreBotProgrammer.iOS
             backButton.BackgroundColor = Colors.PrimaryDark;
             runButton.BackgroundColor = Colors.PrimaryDark;
 
-            UIStyler.ShadowBuilder shadowBuilder = new UIStyler.ShadowBuilder()
-                .WithColor(Colors.DarkText)
-                .WithRadius(3)
-                .WithOpacity(0.5f)
-                .WithOffset(new CGSize(0, 2));
+            UIStyler.ShadowBuilder shadowBuilder = new UIStyler.ShadowBuilder().WithOffset(new CGSize(0, 2));
 
             shadowBuilder.Apply(headerView);
 
