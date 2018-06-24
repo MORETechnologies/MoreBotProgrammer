@@ -32,6 +32,14 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView footerView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView headerView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton runButton { get; set; }
 
         [Outlet]
@@ -58,6 +66,16 @@ namespace MoreBotProgrammer.iOS
             if (blockCollectionView != null) {
                 blockCollectionView.Dispose ();
                 blockCollectionView = null;
+            }
+
+            if (footerView != null) {
+                footerView.Dispose ();
+                footerView = null;
+            }
+
+            if (headerView != null) {
+                headerView.Dispose ();
+                headerView = null;
             }
 
             if (runButton != null) {

@@ -18,6 +18,8 @@
                 <outlet property="addSleepBlockButton" destination="Sfp-OC-WND" id="name-outlet-Sfp-OC-WND"/>
                 <outlet property="backButton" destination="506" id="name-outlet-506"/>
                 <outlet property="blockCollectionView" destination="yjz-sf-JMp" id="name-outlet-yjz-sf-JMp"/>
+                <outlet property="footerView" destination="ew9-DS-NdN" id="name-outlet-ew9-DS-NdN"/>
+                <outlet property="headerView" destination="Jdo-Tf-qbU" id="name-outlet-Jdo-Tf-qbU"/>
                 <outlet property="runButton" destination="240" id="name-outlet-240"/>
                 <outlet property="titleLabel" destination="XUa-pU-uN7" id="name-outlet-XUa-pU-uN7"/>
                 <outlet property="view" destination="YMA-VC-Lzq" id="3hn-XS-hIH"/>
@@ -28,11 +30,21 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yjz-sf-JMp">
+                    <rect key="frame" x="0.0" y="86.5" width="375" height="468"/>
+                    <color key="backgroundColor" red="0.79809955237414976" green="0.79809955237414976" blue="0.79809955237414976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pza-xD-7SA">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jdo-Tf-qbU">
                     <rect key="frame" x="0.0" y="20" width="375" height="66.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="506">
-                            <rect key="frame" x="0.0" y="0.0" width="56" height="66.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="56.5" height="66.5"/>
                             <color key="backgroundColor" red="0.19560699285034022" green="0.19560699285034022" blue="0.19560699285034022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                             <state key="normal" title="Back">
@@ -78,47 +90,49 @@
                         <constraint firstItem="XUa-pU-uN7" firstAttribute="width" secondItem="Jdo-Tf-qbU" secondAttribute="width" multiplier="0.7" id="pek-vB-kY1"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yjz-sf-JMp">
-                    <rect key="frame" x="0.0" y="86.5" width="375" height="468"/>
-                    <color key="backgroundColor" red="0.79809955237414976" green="0.79809955237414976" blue="0.79809955237414976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pza-xD-7SA">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-d9-nKT">
-                    <rect key="frame" x="8" y="562.5" width="171.5" height="96.5"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ew9-DS-NdN">
+                    <rect key="frame" x="0.0" y="554.5" width="375" height="112.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-d9-nKT">
+                            <rect key="frame" x="8" y="8" width="171.5" height="96.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="w9q-d9-nKT" secondAttribute="height" multiplier="16:9" id="2qb-pA-xIc"/>
+                            </constraints>
+                            <state key="normal" title="Add Move Block"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-OC-WND">
+                            <rect key="frame" x="195.5" y="8" width="171.5" height="96.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Sfp-OC-WND" secondAttribute="height" multiplier="16:9" id="8vF-jq-V3I"/>
+                            </constraints>
+                            <state key="normal" title="Add Time Block"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="w9q-d9-nKT" secondAttribute="height" multiplier="16:9" id="2qb-pA-xIc"/>
+                        <constraint firstAttribute="centerX" secondItem="w9q-d9-nKT" secondAttribute="trailing" constant="8" id="IJO-VY-Tnd"/>
+                        <constraint firstItem="w9q-d9-nKT" firstAttribute="leading" secondItem="ew9-DS-NdN" secondAttribute="leading" constant="8" id="WQP-ql-lMq"/>
+                        <constraint firstAttribute="trailing" secondItem="Sfp-OC-WND" secondAttribute="trailing" constant="8" id="bhF-Io-8Q0"/>
+                        <constraint firstItem="Sfp-OC-WND" firstAttribute="leading" secondItem="ew9-DS-NdN" secondAttribute="centerX" constant="8" id="c4S-P4-Nbq"/>
+                        <constraint firstItem="Sfp-OC-WND" firstAttribute="top" secondItem="ew9-DS-NdN" secondAttribute="top" constant="8" id="fBU-vj-d3o"/>
+                        <constraint firstAttribute="bottom" secondItem="w9q-d9-nKT" secondAttribute="bottom" constant="8" id="nO6-c8-Jx3"/>
+                        <constraint firstAttribute="bottom" secondItem="Sfp-OC-WND" secondAttribute="bottom" constant="8" id="o7g-uo-Vll"/>
                     </constraints>
-                    <state key="normal" title="Add Move Block"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-OC-WND">
-                    <rect key="frame" x="195.5" y="562.5" width="171.5" height="96.5"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="Sfp-OC-WND" secondAttribute="height" multiplier="16:9" id="8vF-jq-V3I"/>
-                    </constraints>
-                    <state key="normal" title="Add Time Block"/>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="Sfp-OC-WND" secondAttribute="trailing" constant="8" id="791-5X-ied"/>
-                <constraint firstItem="w9q-d9-nKT" firstAttribute="top" secondItem="yjz-sf-JMp" secondAttribute="bottom" constant="8" id="Bpf-oT-Z4A"/>
                 <constraint firstItem="yjz-sf-JMp" firstAttribute="top" secondItem="Jdo-Tf-qbU" secondAttribute="bottom" id="DaV-NJ-CJ7"/>
+                <constraint firstItem="ew9-DS-NdN" firstAttribute="top" secondItem="yjz-sf-JMp" secondAttribute="bottom" id="F1y-JB-NeF"/>
                 <constraint firstItem="Jdo-Tf-qbU" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" id="GfA-SP-7tG"/>
-                <constraint firstItem="w9q-d9-nKT" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" constant="8" id="NDi-Fs-8uw"/>
-                <constraint firstItem="Sfp-OC-WND" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="centerX" constant="8" id="Rym-sB-jbB"/>
+                <constraint firstItem="ew9-DS-NdN" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" id="Jv2-F7-xB6"/>
+                <constraint firstItem="dl6-oe-4Cq" firstAttribute="bottom" secondItem="ew9-DS-NdN" secondAttribute="bottom" id="NYd-3c-6mx"/>
                 <constraint firstItem="yjz-sf-JMp" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" id="Tiy-a2-WAP"/>
                 <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="yjz-sf-JMp" secondAttribute="trailing" id="Uhv-hj-OPJ"/>
                 <constraint firstItem="Jdo-Tf-qbU" firstAttribute="height" secondItem="YMA-VC-Lzq" secondAttribute="height" multiplier="0.1" id="W41-F0-Mfb"/>
                 <constraint firstItem="Jdo-Tf-qbU" firstAttribute="top" secondItem="dl6-oe-4Cq" secondAttribute="top" id="bg1-wN-V33"/>
-                <constraint firstItem="dl6-oe-4Cq" firstAttribute="bottom" secondItem="Sfp-OC-WND" secondAttribute="bottom" constant="8" id="dCB-9a-Psb"/>
-                <constraint firstItem="dl6-oe-4Cq" firstAttribute="centerX" secondItem="w9q-d9-nKT" secondAttribute="trailing" constant="8" id="oK1-xj-2RJ"/>
+                <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="ew9-DS-NdN" secondAttribute="trailing" id="gdO-ZT-6Q9"/>
                 <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="Jdo-Tf-qbU" secondAttribute="trailing" id="s7s-Vp-zij"/>
-                <constraint firstItem="dl6-oe-4Cq" firstAttribute="bottom" secondItem="w9q-d9-nKT" secondAttribute="bottom" constant="8" id="uKa-pn-cBP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="dl6-oe-4Cq"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>

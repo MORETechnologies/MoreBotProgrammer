@@ -1,4 +1,5 @@
-﻿using MoreBotProgrammer.Core;
+﻿using CoreGraphics;
+using MoreBotProgrammer.Core;
 using UIKit;
 
 namespace MoreBotProgrammer.iOS
@@ -24,6 +25,8 @@ namespace MoreBotProgrammer.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            StyleUI();
 
             NavigationController?.SetNavigationBarHidden(true, false);
 
@@ -60,6 +63,13 @@ namespace MoreBotProgrammer.iOS
         void StyleUI()
         {
             UIStyler.Style(connectButton);
+
+            new UIStyler.ShadowBuilder()
+                        .WithColor(Colors.DarkText)
+                        .WithOffset(new CGSize(0, 2))
+                        .WithRadius(3)
+                        .WithOpacity(0.5f)
+                        .Apply(connectBox);
         }
     }
 }

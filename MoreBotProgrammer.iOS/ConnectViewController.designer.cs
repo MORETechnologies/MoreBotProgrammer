@@ -16,6 +16,10 @@ namespace MoreBotProgrammer.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView connectBox { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton connectButton { get; set; }
 
         [Outlet]
@@ -28,6 +32,11 @@ namespace MoreBotProgrammer.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (connectBox != null) {
+                connectBox.Dispose ();
+                connectBox = null;
+            }
+
             if (connectButton != null) {
                 connectButton.Dispose ();
                 connectButton = null;
