@@ -79,8 +79,8 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yjz-sf-JMp">
-                    <rect key="frame" x="8" y="86.5" width="359" height="468"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="0.0" y="86.5" width="375" height="468"/>
+                    <color key="backgroundColor" red="0.79809955237414976" green="0.79809955237414976" blue="0.79809955237414976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pza-xD-7SA">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -111,8 +111,8 @@
                 <constraint firstItem="Jdo-Tf-qbU" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" id="GfA-SP-7tG"/>
                 <constraint firstItem="w9q-d9-nKT" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" constant="8" id="NDi-Fs-8uw"/>
                 <constraint firstItem="Sfp-OC-WND" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="centerX" constant="8" id="Rym-sB-jbB"/>
-                <constraint firstItem="yjz-sf-JMp" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" constant="8" id="Tiy-a2-WAP"/>
-                <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="yjz-sf-JMp" secondAttribute="trailing" constant="8" id="Uhv-hj-OPJ"/>
+                <constraint firstItem="yjz-sf-JMp" firstAttribute="leading" secondItem="dl6-oe-4Cq" secondAttribute="leading" id="Tiy-a2-WAP"/>
+                <constraint firstItem="dl6-oe-4Cq" firstAttribute="trailing" secondItem="yjz-sf-JMp" secondAttribute="trailing" id="Uhv-hj-OPJ"/>
                 <constraint firstItem="Jdo-Tf-qbU" firstAttribute="height" secondItem="YMA-VC-Lzq" secondAttribute="height" multiplier="0.1" id="W41-F0-Mfb"/>
                 <constraint firstItem="Jdo-Tf-qbU" firstAttribute="top" secondItem="dl6-oe-4Cq" secondAttribute="top" id="bg1-wN-V33"/>
                 <constraint firstItem="dl6-oe-4Cq" firstAttribute="bottom" secondItem="Sfp-OC-WND" secondAttribute="bottom" constant="8" id="dCB-9a-Psb"/>
