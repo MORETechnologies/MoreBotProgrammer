@@ -17,6 +17,8 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
+            StyleUI();
+
             directionPickerView.Model = new DirectionPickerModel(viewModel);
 
             UpdateView();
@@ -47,6 +49,11 @@ namespace MoreBotProgrammer.iOS
             speedSlider.Value = viewModel.Speed;
 
             directionPickerView.Select(viewModel.CurrentDirectionIndex, 0, false);
+        }
+
+        void StyleUI()
+        {
+            UIStyler.Style(deleteButton, saveButton);
         }
     }
 }
