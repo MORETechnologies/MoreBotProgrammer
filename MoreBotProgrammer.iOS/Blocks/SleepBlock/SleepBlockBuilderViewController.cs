@@ -17,6 +17,8 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
+            StyleUI();
+
             sleepTextField.Text = viewModel.Milliseconds.ToString();
 
             saveButton.TouchUpInside += (sender, e) => {
@@ -37,6 +39,11 @@ namespace MoreBotProgrammer.iOS
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
+        }
+
+        void StyleUI()
+        {
+            UIStyler.Style(deleteButton, saveButton);
         }
     }
 }
