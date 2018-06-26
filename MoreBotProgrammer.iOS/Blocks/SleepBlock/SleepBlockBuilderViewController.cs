@@ -44,6 +44,7 @@ namespace MoreBotProgrammer.iOS
         void StyleUI()
         {
             UIStyler.Style(deleteButton, saveButton);
+            deleteButton.SetTitleColor(Colors.RedText, UIControlState.Normal);
         }
     }
 }
