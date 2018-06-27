@@ -91,7 +91,6 @@ namespace MoreBotProgrammer.iOS
         void StyleUI()
         {
             UIStyler.Style(deleteButton, saveButton);
-            deleteButton.SetTitleColor(Colors.LightText, UIControlState.Normal);
 
             Fonts.ApplyFont(Fonts.MainFont, timeHeaderLabel, timeUnitLabel);
             Fonts.ApplyFont(Fonts.MainFont, sleepTextField);

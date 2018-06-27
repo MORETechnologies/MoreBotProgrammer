@@ -94,7 +94,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                     <state key="normal" title="Delete">
-                        <color key="titleColor" red="1" green="0.41100000000000003" blue="0.38" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <variation key="heightClass=regular-widthClass=compact">
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
