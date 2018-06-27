@@ -31,8 +31,6 @@ namespace MoreBotProgrammer.iOS
         {
             base.ViewDidLoad();
 
-            StyleUI();
-
             NavigationController?.SetNavigationBarHidden(true, false);
 
             wifiNameField.Text = DefaultWifi;
@@ -69,6 +67,13 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidDisappear(animated);
 
             NSNotificationCenter.DefaultCenter.RemoveObservers(new[] { keyboardShowObserver, keyboardHideObserver });
+        }
+
+        public override void ViewDidLayoutSubviews()
+        {
+            base.ViewDidLayoutSubviews();
+
+            StyleUI();
         }
 
         async Task Connect()
@@ -115,6 +120,12 @@ namespace MoreBotProgrammer.iOS
             new UIStyler.ShadowBuilder()
                         .WithOffset(new CGSize(0, 2))
                         .Apply(connectBox);
+
+            Fonts.ApplyFont(Fonts.MainFont, wifiNameField);
+            Fonts.ApplyFont(Fonts.MainFont, statusLabel);
+            Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, connectButton.TitleLabel);
+
+            View.LayoutIfNeeded();
         }
     }
 }

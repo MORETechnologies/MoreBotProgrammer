@@ -16,6 +16,7 @@
                 <outlet property="connectBoxCenterYConstraint" destination="fFg-dM-n1V" id="name-outlet-fFg-dM-n1V"/>
                 <outlet property="connectButton" destination="209" id="name-outlet-209"/>
                 <outlet property="statusLabel" destination="210" id="name-outlet-210"/>
+                <outlet property="titleLabel" destination="U3j-qr-RJu" id="name-outlet-U3j-qr-RJu"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
                 <outlet property="wifiNameField" destination="451" id="name-outlet-451"/>
             </connections>
@@ -26,19 +27,19 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORE Coder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3j-qr-RJu">
-                    <rect key="frame" x="37.5" y="20" width="300" height="240.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="90"/>
+                    <rect key="frame" x="37.5" y="20" width="300" height="240"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="90"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                     </variation>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVP-Zg-k0R">
-                    <rect key="frame" x="37.5" y="260.5" width="300" height="166.5"/>
+                    <rect key="frame" x="37.5" y="260" width="300" height="167"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TestCompiler" placeholder="MOREbot Wifi Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="451">
-                            <rect key="frame" x="4.5" y="4" width="291.5" height="69"/>
+                            <rect key="frame" x="4.5" y="4" width="291.5" height="69.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="62"/>
@@ -48,7 +49,7 @@
                             </variation>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="210">
-                            <rect key="frame" x="0.5" y="73" width="299.5" height="21.5"/>
+                            <rect key="frame" x="0.5" y="73.5" width="299.5" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -57,14 +58,14 @@
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="209">
-                            <rect key="frame" x="0.5" y="94.5" width="299.5" height="72.5"/>
+                            <rect key="frame" x="0.5" y="95" width="299.5" height="72.5"/>
                             <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
                             <state key="normal" title="Connect">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
                             </variation>
                         </button>
                     </subviews>

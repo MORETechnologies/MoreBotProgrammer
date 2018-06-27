@@ -17,8 +17,6 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-            StyleUI();
-
             sleepTextField.Text = viewModel.Milliseconds.ToString();
 
             saveButton.TouchUpInside += (sender, e) => {
@@ -35,6 +33,13 @@ namespace MoreBotProgrammer.iOS
             };
         }
 
+        public override void ViewDidLayoutSubviews()
+        {
+            base.ViewDidLayoutSubviews();
+
+            StyleUI();
+        }
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -45,6 +50,12 @@ namespace MoreBotProgrammer.iOS
         {
             UIStyler.Style(deleteButton, saveButton);
             deleteButton.SetTitleColor(Colors.RedText, UIControlState.Normal);
+
+            Fonts.ApplyFont(Fonts.MainFont, timeHeaderLabel, timeUnitLabel);
+            Fonts.ApplyFont(Fonts.MainFont, sleepTextField);
+            Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, deleteButton.TitleLabel, saveButton.TitleLabel);
+
+            View.LayoutIfNeeded();
         }
     }
 }

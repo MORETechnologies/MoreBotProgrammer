@@ -23,6 +23,13 @@ namespace MoreBotProgrammer.iOS
             return view;
         }
 
+        public override void AwakeFromNib()
+        {
+            base.AwakeFromNib();
+
+            StyleUI();
+        }
+
         public override void SetViewModel(BlockViewModel blockViewModel)
         {
             viewModel = (MoveBlockViewModel)blockViewModel;
@@ -33,6 +40,11 @@ namespace MoreBotProgrammer.iOS
         {
             directionLabel.Text = viewModel.Direction;
             speedLabel.Text = viewModel.Speed;
+        }
+
+        void StyleUI()
+        {
+            Fonts.ApplyFont(Fonts.MainFont, directionLabel, speedLabel);
         }
     }
 }

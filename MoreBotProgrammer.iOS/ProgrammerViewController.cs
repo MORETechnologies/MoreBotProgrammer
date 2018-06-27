@@ -21,8 +21,6 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-            StyleUI();
-
             dataSource = new BlockListDataSource(viewModel);
             blockBuilderFactory = new BlockBuilderViewControllerFactory();
             blockCollectionView.RegisterNibForCell(BlockViewCell.Nib, BlockType.Move.ToString());
@@ -87,6 +85,13 @@ namespace MoreBotProgrammer.iOS
             };
         }
 
+        public override void ViewDidLayoutSubviews()
+        {
+            base.ViewDidLayoutSubviews();
+
+            StyleUI();
+        }
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -103,6 +108,10 @@ namespace MoreBotProgrammer.iOS
 
             shadowBuilder.WithOffset(new CGSize(0, -2))
                          .Apply(footerView);
+
+            Fonts.ApplyFont(Fonts.MainFontBold, backButton.TitleLabel, titleLabel, runButton.TitleLabel, addMoveBlockButton.TitleLabel, addSleepBlockButton.TitleLabel);
+
+            View.LayoutIfNeeded();
         }
     }
 }

@@ -15,10 +15,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoveBlockBuilderViewController">
             <connections>
                 <outlet property="deleteButton" destination="dAQ-ya-Edf" id="name-outlet-dAQ-ya-Edf"/>
+                <outlet property="directionHeaderLabel" destination="160" id="name-outlet-160"/>
                 <outlet property="directionPickerView" destination="391" id="name-outlet-391"/>
                 <outlet property="saveButton" destination="174" id="name-outlet-174"/>
                 <outlet property="speedLabel" destination="169" id="name-outlet-169"/>
                 <outlet property="speedSlider" destination="167" id="name-outlet-167"/>
+                <outlet property="titleLabel" destination="98E-UU-XbI" id="name-outlet-98E-UU-XbI"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
             </connections>
         </placeholder>
@@ -28,12 +30,12 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build your Move Block" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98E-UU-XbI">
-                    <rect key="frame" x="73.5" y="36" width="228.5" height="29"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                    <rect key="frame" x="64.5" y="36" width="246.5" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     </variation>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NO-KZ-WAa">
@@ -74,12 +76,12 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="174" secondAttribute="height" multiplier="16:9" id="TdI-PF-r0O"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                     <state key="normal" title="Save">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     </variation>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-ya-Edf">
@@ -88,12 +90,12 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="dAQ-ya-Edf" secondAttribute="height" multiplier="16:9" id="jRn-2B-ovp"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                     <state key="normal" title="Delete">
                         <color key="titleColor" red="1" green="0.41100000000000003" blue="0.38" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     </variation>
                 </button>
             </subviews>

@@ -16,6 +16,9 @@
                 <outlet property="deleteButton" destination="401" id="name-outlet-401"/>
                 <outlet property="saveButton" destination="190" id="name-outlet-190"/>
                 <outlet property="sleepTextField" destination="188" id="name-outlet-188"/>
+                <outlet property="timeHeaderLabel" destination="187" id="name-outlet-187"/>
+                <outlet property="timeUnitLabel" destination="189" id="name-outlet-189"/>
+                <outlet property="titleLabel" destination="ds3-PN-X7w" id="name-outlet-ds3-PN-X7w"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
             </connections>
         </placeholder>
@@ -38,12 +41,12 @@
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build a Wait Block" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds3-PN-X7w">
-                    <rect key="frame" x="95.5" y="36" width="184" height="29"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                    <rect key="frame" x="88" y="36" width="199" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     </variation>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="188">
@@ -70,12 +73,12 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="190" secondAttribute="height" multiplier="16:9" id="gWB-0H-GTl"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                     <state key="normal" title="Save">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     </variation>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="401">
@@ -84,12 +87,12 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="401" secondAttribute="height" multiplier="16:9" id="1mp-0n-0Ov"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                     <state key="normal" title="Delete">
                         <color key="titleColor" red="1" green="0.41100000000000003" blue="0.38" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     </variation>
                 </button>
             </subviews>

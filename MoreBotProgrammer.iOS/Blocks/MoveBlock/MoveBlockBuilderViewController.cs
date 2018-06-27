@@ -17,8 +17,6 @@ namespace MoreBotProgrammer.iOS
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-            StyleUI();
-
             directionPickerView.Model = new DirectionPickerModel(viewModel);
 
             UpdateView();
@@ -41,6 +39,13 @@ namespace MoreBotProgrammer.iOS
             };
         }
 
+        public override void ViewDidLayoutSubviews()
+        {
+            base.ViewDidLayoutSubviews();
+
+            StyleUI();
+        }
+
         void UpdateView()
         {
             speedLabel.Text = "Speed: " + viewModel.SpeedText;
@@ -55,6 +60,11 @@ namespace MoreBotProgrammer.iOS
         {
             UIStyler.Style(deleteButton, saveButton);
             deleteButton.SetTitleColor(Colors.RedText, UIControlState.Normal);
+
+            Fonts.ApplyFont(Fonts.MainFont, directionHeaderLabel, speedLabel);
+            Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, deleteButton.TitleLabel, saveButton.TitleLabel);
+
+            View.LayoutIfNeeded();
         }
     }
 }

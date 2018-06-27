@@ -32,6 +32,10 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel titleLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField wifiNameField { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -54,6 +58,11 @@ namespace MoreBotProgrammer.iOS
             if (statusLabel != null) {
                 statusLabel.Dispose ();
                 statusLabel = null;
+            }
+
+            if (titleLabel != null) {
+                titleLabel.Dispose ();
+                titleLabel = null;
             }
 
             if (wifiNameField != null) {

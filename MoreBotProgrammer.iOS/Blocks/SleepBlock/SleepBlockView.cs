@@ -21,6 +21,13 @@ namespace MoreBotProgrammer.iOS
             return view;
         }
 
+        public override void AwakeFromNib()
+        {
+            base.AwakeFromNib();
+
+            StyleUI();
+        }
+
         public override BlockViewModel BlockViewModel => viewModel;
 
         public override void SetViewModel(BlockViewModel blockViewModel)
@@ -28,6 +35,11 @@ namespace MoreBotProgrammer.iOS
             viewModel = (SleepBlockViewModel)blockViewModel;
 
             sleepLabel.Text = viewModel.Milliseconds;
+        }
+
+        void StyleUI()
+        {
+            Fonts.ApplyFont(Fonts.MainFont, sleepLabel);
         }
     }
 }

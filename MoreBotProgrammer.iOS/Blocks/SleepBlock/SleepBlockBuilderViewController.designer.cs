@@ -26,6 +26,18 @@ namespace MoreBotProgrammer.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField sleepTextField { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel timeHeaderLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel timeUnitLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel titleLabel { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (deleteButton != null) {
@@ -41,6 +53,21 @@ namespace MoreBotProgrammer.iOS
             if (sleepTextField != null) {
                 sleepTextField.Dispose ();
                 sleepTextField = null;
+            }
+
+            if (timeHeaderLabel != null) {
+                timeHeaderLabel.Dispose ();
+                timeHeaderLabel = null;
+            }
+
+            if (timeUnitLabel != null) {
+                timeUnitLabel.Dispose ();
+                timeUnitLabel = null;
+            }
+
+            if (titleLabel != null) {
+                titleLabel.Dispose ();
+                titleLabel = null;
             }
         }
     }

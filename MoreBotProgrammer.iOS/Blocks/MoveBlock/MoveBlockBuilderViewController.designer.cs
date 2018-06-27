@@ -20,6 +20,10 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel directionHeaderLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIPickerView directionPickerView { get; set; }
 
         [Outlet]
@@ -34,11 +38,20 @@ namespace MoreBotProgrammer.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISlider speedSlider { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel titleLabel { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (deleteButton != null) {
                 deleteButton.Dispose ();
                 deleteButton = null;
+            }
+
+            if (directionHeaderLabel != null) {
+                directionHeaderLabel.Dispose ();
+                directionHeaderLabel = null;
             }
 
             if (directionPickerView != null) {
@@ -59,6 +72,11 @@ namespace MoreBotProgrammer.iOS
             if (speedSlider != null) {
                 speedSlider.Dispose ();
                 speedSlider = null;
+            }
+
+            if (titleLabel != null) {
+                titleLabel.Dispose ();
+                titleLabel = null;
             }
         }
     }

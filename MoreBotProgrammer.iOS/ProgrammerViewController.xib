@@ -44,34 +44,34 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="66.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="506">
-                            <rect key="frame" x="0.0" y="0.0" width="57" height="66.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="57.5" height="66.5"/>
                             <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                             <state key="normal" title="Back">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             </variation>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-pU-uN7">
-                            <rect key="frame" x="57" y="19.5" width="262" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                            <rect key="frame" x="57.5" y="19" width="262" height="29"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="240">
-                            <rect key="frame" x="319" y="0.0" width="56" height="66.5"/>
+                            <rect key="frame" x="319.5" y="0.0" width="55.5" height="66.5"/>
                             <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                             <state key="normal" title="Run">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             </variation>
                         </button>
                     </subviews>
@@ -99,12 +99,12 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="w9q-d9-nKT" secondAttribute="height" multiplier="16:9" id="2qb-pA-xIc"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                             <state key="normal" title="Add Move Block">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             </variation>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-OC-WND">
@@ -113,12 +113,12 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Sfp-OC-WND" secondAttribute="height" multiplier="16:9" id="8vF-jq-V3I"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                             <state key="normal" title="Add Time Block">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             </variation>
                         </button>
                     </subviews>
