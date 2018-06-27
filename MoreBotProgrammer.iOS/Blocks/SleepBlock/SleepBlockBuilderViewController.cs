@@ -92,6 +92,10 @@ namespace MoreBotProgrammer.iOS
         {
             UIStyler.Style(deleteButton, saveButton);
 
+            new UIStyler.ShadowBuilder()
+                        .WithOffset(new CGSize(1, 1))
+                        .Apply(deleteButton, saveButton);
+
             Fonts.ApplyFont(Fonts.MainFont, timeHeaderLabel, timeUnitLabel);
             Fonts.ApplyFont(Fonts.MainFont, sleepTextField);
             Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, deleteButton.TitleLabel, saveButton.TitleLabel);

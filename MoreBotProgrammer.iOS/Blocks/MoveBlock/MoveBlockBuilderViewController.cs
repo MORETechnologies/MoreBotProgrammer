@@ -1,4 +1,5 @@
-﻿using MoreBotProgrammer.Core;
+﻿using CoreGraphics;
+using MoreBotProgrammer.Core;
 using UIKit;
 
 namespace MoreBotProgrammer.iOS
@@ -59,6 +60,10 @@ namespace MoreBotProgrammer.iOS
         void StyleUI()
         {
             UIStyler.Style(deleteButton, saveButton);
+
+            new UIStyler.ShadowBuilder()
+                        .WithOffset(new CGSize(1, 1))
+                        .Apply(deleteButton, saveButton);
 
             Fonts.ApplyFont(Fonts.MainFont, directionHeaderLabel, speedLabel);
             Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, deleteButton.TitleLabel, saveButton.TitleLabel);

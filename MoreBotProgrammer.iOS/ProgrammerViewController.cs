@@ -103,7 +103,7 @@ namespace MoreBotProgrammer.iOS
             UIStyler.Style(backButton, runButton, addMoveBlockButton, addSleepBlockButton);
 
             UIStyler.ShadowBuilder shadowBuilder = new UIStyler.ShadowBuilder()
-                .WithColor(Colors.Primary)
+                .WithColor(Colors.PrimaryDark)
                 .WithOffset(new CGSize(0, 2));
 
             shadowBuilder.Apply(headerView);
@@ -111,6 +111,9 @@ namespace MoreBotProgrammer.iOS
             shadowBuilder.WithOffset(new CGSize(0, -2))
                          .WithColor(UIColor.Black)
                          .Apply(footerView);
+
+            shadowBuilder.WithOffset(new CGSize(1, 1))
+                         .Apply(addMoveBlockButton, addSleepBlockButton);
 
             Fonts.ApplyFont(Fonts.MainFontBold, backButton.TitleLabel, titleLabel, runButton.TitleLabel, addMoveBlockButton.TitleLabel, addSleepBlockButton.TitleLabel);
             headerView.BackgroundColor = Colors.Primary;
