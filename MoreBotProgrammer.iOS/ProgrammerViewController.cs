@@ -102,11 +102,14 @@ namespace MoreBotProgrammer.iOS
         {
             UIStyler.Style(backButton, runButton, addMoveBlockButton, addSleepBlockButton);
 
-            UIStyler.ShadowBuilder shadowBuilder = new UIStyler.ShadowBuilder().WithOffset(new CGSize(0, 2));
+            UIStyler.ShadowBuilder shadowBuilder = new UIStyler.ShadowBuilder()
+                .WithColor(Colors.Primary)
+                .WithOffset(new CGSize(0, 2));
 
             shadowBuilder.Apply(headerView);
 
             shadowBuilder.WithOffset(new CGSize(0, -2))
+                         .WithColor(UIColor.Black)
                          .Apply(footerView);
 
             Fonts.ApplyFont(Fonts.MainFontBold, backButton.TitleLabel, titleLabel, runButton.TitleLabel, addMoveBlockButton.TitleLabel, addSleepBlockButton.TitleLabel);

@@ -119,6 +119,7 @@ namespace MoreBotProgrammer.iOS
 
             new UIStyler.ShadowBuilder()
                         .WithOffset(new CGSize(0, 2))
+                        .WithColor(Colors.Primary)
                         .Apply(connectBox);
 
             Fonts.ApplyFont(Fonts.MainFont, wifiNameField);

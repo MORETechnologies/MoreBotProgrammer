@@ -29,7 +29,7 @@ namespace MoreBotProgrammer.iOS
                 offset = new CGSize(2, 2);
                 opacity = 0.5f;
                 radius = 3;
-                color = Colors.DarkText.CGColor;
+                color = UIColor.Black.CGColor;
             }
 
             public ShadowBuilder WithOffset(CGSize offset)
