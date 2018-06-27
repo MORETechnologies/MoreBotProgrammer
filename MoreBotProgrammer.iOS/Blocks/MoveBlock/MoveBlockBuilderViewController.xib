@@ -16,8 +16,10 @@
             <connections>
                 <outlet property="deleteButton" destination="dAQ-ya-Edf" id="name-outlet-dAQ-ya-Edf"/>
                 <outlet property="directionHeaderLabel" destination="160" id="name-outlet-160"/>
+                <outlet property="directionHeaderView" destination="8NO-KZ-WAa" id="name-outlet-8NO-KZ-WAa"/>
                 <outlet property="directionPickerView" destination="391" id="name-outlet-391"/>
                 <outlet property="saveButton" destination="174" id="name-outlet-174"/>
+                <outlet property="speedHeaderView" destination="31f-wv-tjh" id="name-outlet-31f-wv-tjh"/>
                 <outlet property="speedLabel" destination="169" id="name-outlet-169"/>
                 <outlet property="speedSlider" destination="167" id="name-outlet-167"/>
                 <outlet property="titleLabel" destination="98E-UU-XbI" id="name-outlet-98E-UU-XbI"/>

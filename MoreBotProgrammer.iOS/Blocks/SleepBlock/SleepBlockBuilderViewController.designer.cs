@@ -36,6 +36,10 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView timeHeaderView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel timeUnitLabel { get; set; }
 
         [Outlet]
@@ -67,6 +71,11 @@ namespace MoreBotProgrammer.iOS
             if (timeHeaderLabel != null) {
                 timeHeaderLabel.Dispose ();
                 timeHeaderLabel = null;
+            }
+
+            if (timeHeaderView != null) {
+                timeHeaderView.Dispose ();
+                timeHeaderView = null;
             }
 
             if (timeUnitLabel != null) {

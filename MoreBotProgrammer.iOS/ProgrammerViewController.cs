@@ -110,6 +110,7 @@ namespace MoreBotProgrammer.iOS
                          .Apply(footerView);
 
             Fonts.ApplyFont(Fonts.MainFontBold, backButton.TitleLabel, titleLabel, runButton.TitleLabel, addMoveBlockButton.TitleLabel, addSleepBlockButton.TitleLabel);
+            headerView.BackgroundColor = Colors.Primary;
 
             View.LayoutIfNeeded();
         }

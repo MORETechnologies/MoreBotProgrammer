@@ -18,6 +18,7 @@
                 <outlet property="saveButton" destination="190" id="name-outlet-190"/>
                 <outlet property="sleepTextField" destination="188" id="name-outlet-188"/>
                 <outlet property="timeHeaderLabel" destination="187" id="name-outlet-187"/>
+                <outlet property="timeHeaderView" destination="fWj-A9-H58" id="name-outlet-fWj-A9-H58"/>
                 <outlet property="timeUnitLabel" destination="189" id="name-outlet-189"/>
                 <outlet property="titleLabel" destination="ds3-PN-X7w" id="name-outlet-ds3-PN-X7w"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>

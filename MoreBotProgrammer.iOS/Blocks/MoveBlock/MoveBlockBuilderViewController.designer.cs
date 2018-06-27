@@ -24,11 +24,19 @@ namespace MoreBotProgrammer.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView directionHeaderView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIPickerView directionPickerView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton saveButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView speedHeaderView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -54,6 +62,11 @@ namespace MoreBotProgrammer.iOS
                 directionHeaderLabel = null;
             }
 
+            if (directionHeaderView != null) {
+                directionHeaderView.Dispose ();
+                directionHeaderView = null;
+            }
+
             if (directionPickerView != null) {
                 directionPickerView.Dispose ();
                 directionPickerView = null;
@@ -62,6 +75,11 @@ namespace MoreBotProgrammer.iOS
             if (saveButton != null) {
                 saveButton.Dispose ();
                 saveButton = null;
+            }
+
+            if (speedHeaderView != null) {
+                speedHeaderView.Dispose ();
+                speedHeaderView = null;
             }
 
             if (speedLabel != null) {

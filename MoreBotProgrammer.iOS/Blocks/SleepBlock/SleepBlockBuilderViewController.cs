@@ -96,6 +96,7 @@ namespace MoreBotProgrammer.iOS
             Fonts.ApplyFont(Fonts.MainFont, timeHeaderLabel, timeUnitLabel);
             Fonts.ApplyFont(Fonts.MainFont, sleepTextField);
             Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, deleteButton.TitleLabel, saveButton.TitleLabel);
+            timeHeaderView.BackgroundColor = Colors.Primary;
 
             View.LayoutIfNeeded();
         }

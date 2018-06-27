@@ -63,6 +63,7 @@ namespace MoreBotProgrammer.iOS
 
             Fonts.ApplyFont(Fonts.MainFont, directionHeaderLabel, speedLabel);
             Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, deleteButton.TitleLabel, saveButton.TitleLabel);
+            Colors.ApplyBackgroundColor(Colors.Primary, directionHeaderView, speedHeaderView);
 
             View.LayoutIfNeeded();
         }

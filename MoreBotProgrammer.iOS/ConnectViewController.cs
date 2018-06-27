@@ -124,6 +124,7 @@ namespace MoreBotProgrammer.iOS
             Fonts.ApplyFont(Fonts.MainFont, wifiNameField);
             Fonts.ApplyFont(Fonts.MainFont, statusLabel);
             Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, connectButton.TitleLabel);
+            connectBox.BackgroundColor = Colors.Primary;
 
             View.LayoutIfNeeded();
         }
