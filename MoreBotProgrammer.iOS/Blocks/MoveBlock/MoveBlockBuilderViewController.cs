@@ -59,7 +59,7 @@ namespace MoreBotProgrammer.iOS
         void StyleUI()
         {
             UIStyler.Style(deleteButton, saveButton);
-            deleteButton.SetTitleColor(Colors.RedText, UIControlState.Normal);
+            deleteButton.SetTitleColor(Colors.LightText, UIControlState.Normal);
 
             Fonts.ApplyFont(Fonts.MainFont, directionHeaderLabel, speedLabel);
             Fonts.ApplyFont(Fonts.MainFontBold, titleLabel, deleteButton.TitleLabel, saveButton.TitleLabel);
