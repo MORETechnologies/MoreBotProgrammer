@@ -16,6 +16,10 @@ namespace MoreBotProgrammer.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.NSLayoutConstraint buttonBottomConstraint { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton deleteButton { get; set; }
 
         [Outlet]
@@ -40,6 +44,11 @@ namespace MoreBotProgrammer.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (buttonBottomConstraint != null) {
+                buttonBottomConstraint.Dispose ();
+                buttonBottomConstraint = null;
+            }
+
             if (deleteButton != null) {
                 deleteButton.Dispose ();
                 deleteButton = null;

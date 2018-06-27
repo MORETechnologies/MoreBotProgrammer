@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SleepBlockBuilderViewController">
             <connections>
+                <outlet property="buttonBottomConstraint" destination="GyJ-Ql-dIg" id="name-outlet-GyJ-Ql-dIg"/>
                 <outlet property="deleteButton" destination="401" id="name-outlet-401"/>
                 <outlet property="saveButton" destination="190" id="name-outlet-190"/>
                 <outlet property="sleepTextField" destination="188" id="name-outlet-188"/>
