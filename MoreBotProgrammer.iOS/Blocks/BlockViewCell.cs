@@ -1,5 +1,4 @@
 ﻿using System;
-using CoreGraphics;
 using Foundation;
 using MoreBotProgrammer.Core;
 using UIKit;
@@ -32,7 +31,15 @@ namespace MoreBotProgrammer.iOS
 
         public void SetViewModel(BlockViewModel viewModel)
         {
+            if (BlockViewModel != null) {
+                BlockViewModel.RunningChanged -= OnRunChanged;
+            }
+
             BlockViewModel = viewModel;
+
+            BlockViewModel.RunningChanged += OnRunChanged;
+
+            SetRunning(BlockViewModel.Running);
 
             BlockView blockView = null;
             if (cellContainer.Subviews.Length > 0) {
@@ -60,6 +67,20 @@ namespace MoreBotProgrammer.iOS
             }
 
             blockView.SetViewModel(viewModel);
+        }
+
+        void OnRunChanged(object sender, bool running)
+        {
+            InvokeOnMainThread(() => SetRunning(running));
+        }
+
+        void SetRunning(bool running)
+        {
+            if (running) {
+                BackgroundColor = Colors.PrimaryLight;
+            } else {
+                BackgroundColor = UIColor.Clear;
+            }
         }
     }
 }
