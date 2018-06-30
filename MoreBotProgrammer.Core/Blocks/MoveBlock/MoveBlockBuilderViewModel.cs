@@ -34,7 +34,7 @@ namespace MoreBotProgrammer.Core
 
         public void ChangeDirection(int index)
         {
-            if (index > 0 && index < DirectionOptions.Length) {
+            if (index >= 0 && index < DirectionOptions.Length) {
                 currentDirection = (MoveDirection)index;
                 ValuesChanged?.Invoke(this, EventArgs.Empty);
             }
