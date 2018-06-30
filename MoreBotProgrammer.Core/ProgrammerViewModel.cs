@@ -100,6 +100,9 @@ namespace MoreBotProgrammer.Core
             CompilingStateChanged?.Invoke(this, true);
 
             await compiler.Compile(blocks);
+            foreach (var block in blockViewModels) {
+                await block.Run();
+            }
 
             CompilingStateChanged?.Invoke(this, false);
         }

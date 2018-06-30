@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MoreBotProgrammer.Core
 {
@@ -27,5 +28,12 @@ namespace MoreBotProgrammer.Core
         public string Milliseconds { get; private set; }
 
         internal override Block Block => block;
+
+        public override async Task Run()
+        {
+            Running = true;
+            await Task.Delay(block.Milliseconds);
+            Running = false;
+        }
     }
 }
