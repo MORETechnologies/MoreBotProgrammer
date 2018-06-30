@@ -12,8 +12,10 @@ namespace MoreBotProgrammer.iOS
         const string TestWifi = "test";
 #if SIMULATOR
         const string DefaultWifi = TestWifi;
-#else
+#elif DEBUG
         const string DefaultWifi = "TestCompiler";
+#else
+        const string DefaultWifi = "BotWifi";
 #endif
 
         AppMain main;
