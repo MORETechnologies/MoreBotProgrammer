@@ -43,19 +43,22 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jdo-Tf-qbU">
                     <rect key="frame" x="0.0" y="20" width="375" height="66.5"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="506">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="506">
                             <rect key="frame" x="0.0" y="0.0" width="57.5" height="66.5"/>
                             <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                            <state key="normal" title="Back">
+                            <inset key="imageEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                            <state key="normal" image="Icons/angle-left.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            </variation>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-pU-uN7">
-                            <rect key="frame" x="57.5" y="19" width="262" height="29"/>
+                            <rect key="frame" x="57" y="19.5" width="262" height="29"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -63,16 +66,20 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                             </variation>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="240">
-                            <rect key="frame" x="319.5" y="0.0" width="55.5" height="66.5"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="240">
+                            <rect key="frame" x="319" y="0.0" width="56" height="66.5"/>
                             <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                            <state key="normal" title="Run">
+                            <inset key="imageEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                            <state key="normal" image="Icons/play.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            </variation>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=regular-widthClass=compact"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,42 +100,58 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ew9-DS-NdN">
                     <rect key="frame" x="0.0" y="554.5" width="375" height="112.5"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-d9-nKT">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-d9-nKT">
                             <rect key="frame" x="8" y="8" width="171.5" height="96.5"/>
                             <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="w9q-d9-nKT" secondAttribute="height" multiplier="16:9" id="2qb-pA-xIc"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                            <state key="normal" title="Add Move Block">
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                            <state key="normal" title="Move">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                             </variation>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-OC-WND">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/arrows.png" translatesAutoresizingMaskIntoConstraints="NO" id="F4U-7G-oCw">
+                            <rect key="frame" x="24" y="32" width="54.5" height="48.5"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-OC-WND">
                             <rect key="frame" x="195.5" y="8" width="171.5" height="96.5"/>
                             <color key="backgroundColor" red="0.39732361700000002" green="0.39732361700000002" blue="0.39732361700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Sfp-OC-WND" secondAttribute="height" multiplier="16:9" id="8vF-jq-V3I"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                            <state key="normal" title="Add Time Block">
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                            <state key="normal" title="Time">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                             </variation>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icons/timer.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rD-qx-eYw">
+                            <rect key="frame" x="211.5" y="32" width="54.5" height="48.5"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="0rD-qx-eYw" firstAttribute="leading" secondItem="Sfp-OC-WND" secondAttribute="leading" constant="16" id="9hK-md-9b8"/>
+                        <constraint firstItem="F4U-7G-oCw" firstAttribute="bottom" secondItem="w9q-d9-nKT" secondAttribute="bottom" constant="-24" id="FcD-I0-bHQ"/>
                         <constraint firstAttribute="centerX" secondItem="w9q-d9-nKT" secondAttribute="trailing" constant="8" id="IJO-VY-Tnd"/>
+                        <constraint firstItem="Sfp-OC-WND" firstAttribute="centerX" secondItem="0rD-qx-eYw" secondAttribute="trailing" constant="16" id="V6X-aM-8R2"/>
                         <constraint firstItem="w9q-d9-nKT" firstAttribute="leading" secondItem="ew9-DS-NdN" secondAttribute="leading" constant="8" id="WQP-ql-lMq"/>
                         <constraint firstAttribute="trailing" secondItem="Sfp-OC-WND" secondAttribute="trailing" constant="8" id="bhF-Io-8Q0"/>
+                        <constraint firstItem="0rD-qx-eYw" firstAttribute="bottom" secondItem="Sfp-OC-WND" secondAttribute="bottom" constant="-24" id="bkO-cU-kGv"/>
+                        <constraint firstItem="F4U-7G-oCw" firstAttribute="top" secondItem="w9q-d9-nKT" secondAttribute="top" constant="24" id="bsI-Wg-o42"/>
                         <constraint firstItem="Sfp-OC-WND" firstAttribute="leading" secondItem="ew9-DS-NdN" secondAttribute="centerX" constant="8" id="c4S-P4-Nbq"/>
                         <constraint firstItem="Sfp-OC-WND" firstAttribute="top" secondItem="ew9-DS-NdN" secondAttribute="top" constant="8" id="fBU-vj-d3o"/>
+                        <constraint firstItem="F4U-7G-oCw" firstAttribute="leading" secondItem="w9q-d9-nKT" secondAttribute="leading" constant="16" id="fIP-Hw-WST"/>
+                        <constraint firstItem="0rD-qx-eYw" firstAttribute="top" secondItem="Sfp-OC-WND" secondAttribute="top" constant="24" id="gC8-4n-bkx"/>
+                        <constraint firstItem="w9q-d9-nKT" firstAttribute="centerX" secondItem="F4U-7G-oCw" secondAttribute="trailing" constant="16" id="hUg-hB-w8w"/>
                         <constraint firstAttribute="bottom" secondItem="w9q-d9-nKT" secondAttribute="bottom" constant="8" id="nO6-c8-Jx3"/>
                         <constraint firstAttribute="bottom" secondItem="Sfp-OC-WND" secondAttribute="bottom" constant="8" id="o7g-uo-Vll"/>
                     </constraints>
@@ -152,4 +175,10 @@
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Icons/angle-left.png" width="16" height="16"/>
+        <image name="Icons/arrows.png" width="16" height="16"/>
+        <image name="Icons/play.png" width="16" height="16"/>
+        <image name="Icons/timer.png" width="16" height="16"/>
+    </resources>
 </document>

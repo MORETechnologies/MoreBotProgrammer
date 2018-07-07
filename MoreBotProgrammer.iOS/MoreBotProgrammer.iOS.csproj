@@ -107,6 +107,7 @@
     <Folder Include="Blocks\SleepBlock\" />
     <Folder Include="BlockList\" />
     <Folder Include="Resources\Fonts\" />
+    <Folder Include="Resources\Icons\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -185,6 +186,10 @@
     <BundleResource Include="Resources\Fonts\OpenSans-Regular.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <BundleResource Include="Resources\Icons\angle-left.png" />
+    <BundleResource Include="Resources\Icons\play.png" />
+    <BundleResource Include="Resources\Icons\arrows.png" />
+    <BundleResource Include="Resources\Icons\timer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
